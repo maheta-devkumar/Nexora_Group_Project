@@ -1,0 +1,467 @@
+/* ReturnOrderModal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(45, 52, 54, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.return-order-modal {
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 20px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.modal-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d3436;
+    margin: 0;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #636e72;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-close:hover {
+    background: #f8f9fa;
+    color: #e74c3c;
+}
+
+.modal-content {
+    padding: 30px;
+}
+
+.order-info {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.order-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d3436;
+    margin-bottom: 4px;
+}
+
+.order-info p {
+    font-size: 14px;
+    color: #636e72;
+    margin: 0;
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3436;
+    margin-bottom: 15px;
+}
+
+/* Items List */
+.items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: #f8f9fa;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.item-option:hover {
+    border-color: #667eea;
+    background: white;
+}
+
+.item-option.selected {
+    border-color: #667eea;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+}
+
+.item-checkbox {
+    position: relative;
+}
+
+.item-checkbox input {
+    display: none;
+}
+
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #b2bec3;
+    border-radius: 6px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.item-option input:checked + .checkbox-custom {
+    border-color: #667eea;
+    background: #667eea;
+}
+
+.item-option input:checked + .checkbox-custom::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-info h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3436;
+    margin-bottom: 4px;
+}
+
+.item-info p {
+    font-size: 14px;
+    color: #636e72;
+    margin-bottom: 4px;
+}
+
+.item-price {
+    font-weight: 600;
+    color: #667eea !important;
+}
+
+.item-image {
+    flex-shrink: 0;
+}
+
+.image-placeholder {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+/* Return Type Options */
+.return-type-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.return-type-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: #f8f9fa;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.return-type-option:hover {
+    border-color: #667eea;
+    background: white;
+}
+
+.return-type-option input {
+    display: none;
+}
+
+.return-type-option .radio-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #b2bec3;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.return-type-option input:checked + .radio-custom {
+    border-color: #667eea;
+    background: #667eea;
+}
+
+.return-type-option input:checked + .radio-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+}
+
+.type-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.type-info strong {
+    font-size: 16px;
+    color: #2d3436;
+}
+
+.type-info span {
+    font-size: 14px;
+    color: #636e72;
+}
+
+/* Reason Options */
+.reason-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.reason-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: #f8f9fa;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.reason-option:hover {
+    border-color: #667eea;
+    background: white;
+}
+
+.reason-option input {
+    display: none;
+}
+
+.reason-option .radio-custom {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #b2bec3;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.reason-option input:checked + .radio-custom {
+    border-color: #667eea;
+    background: #667eea;
+}
+
+.reason-option input:checked + .radio-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+}
+
+/* Textarea */
+.form-section textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #2d3436;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    resize: vertical;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-section textarea:focus {
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+/* Return Instructions */
+.return-instructions {
+    background: #e3f2fd;
+    border: 1px solid #bbdefb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.return-instructions h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1976d2;
+    margin-bottom: 12px;
+}
+
+.return-instructions ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #1976d2;
+}
+
+.return-instructions li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.return-instructions li:last-child {
+    margin-bottom: 0;
+}
+
+/* Modal Actions */
+.modal-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-cancel,
+.btn-confirm-return {
+    flex: 1;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel {
+    background: #f8f9fa;
+    color: #636e72;
+    border: 2px solid #e9ecef;
+}
+
+.btn-cancel:hover {
+    background: #e9ecef;
+    color: #2d3436;
+}
+
+.btn-confirm-return {
+    background: #667eea;
+    color: white;
+}
+
+.btn-confirm-return:hover:not(:disabled) {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-confirm-return:disabled {
+    background: #b2bec3;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-overlay {
+        padding: 15px;
+    }
+    
+    .return-order-modal {
+        max-height: 95vh;
+    }
+    
+    .modal-header,
+    .modal-content {
+        padding: 20px;
+    }
+    
+    .reason-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .item-option {
+        padding: 15px;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+    
+    .btn-cancel,
+    .btn-confirm-return {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-header h2 {
+        font-size: 20px;
+    }
+    
+    .return-type-option {
+        padding: 15px;
+    }
+    
+    .type-info strong {
+        font-size: 14px;
+    }
+    
+    .type-info span {
+        font-size: 12px;
+    }
+}

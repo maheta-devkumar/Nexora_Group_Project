@@ -1,0 +1,357 @@
+/* DeliveryFilters.css */
+@import '../../../styles/admin-theme.css';
+
+.filters-container {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    box-shadow: var(--admin-shadow-soft);
+    border: 1px solid var(--admin-border);
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.filters-top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .filters-top {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.search-container {
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .search-container {
+        max-width: 400px;
+    }
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 16px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+    background-color: var(--admin-white);
+    color: var(--admin-text-dark);
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-input:disabled {
+    background-color: var(--admin-bg-page);
+    cursor: not-allowed;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--admin-text-light);
+}
+
+.clear-search {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--admin-text-light);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+    background: none;
+    transition: all 0.2s ease;
+}
+
+.clear-search:hover {
+    background-color: var(--admin-bg-page);
+    color: var(--admin-accent-red);
+}
+
+.filters-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.quick-filters {
+    display: none;
+    gap: 8px;
+}
+
+@media (min-width: 900px) {
+    .quick-filters {
+        display: flex;
+    }
+}
+
+.quick-filter-button {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--admin-bg-page);
+    color: var(--admin-text-subtle);
+}
+
+.quick-filter-button:hover {
+    background-color: var(--admin-border);
+    color: var(--admin-text-dark);
+}
+
+.quick-filter-button.active {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--admin-primary);
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.toggle-filters,
+.toggle-advanced {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--admin-border);
+    background-color: var(--admin-white);
+    color: var(--admin-text-dark);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.toggle-filters:hover,
+.toggle-advanced:hover {
+    background-color: var(--admin-bg-page);
+    border-color: var(--admin-text-subtle);
+}
+
+.toggle-filters.active,
+.toggle-advanced.active {
+    background-color: var(--admin-bg-page);
+    border-color: var(--admin-primary);
+    color: var(--admin-primary);
+}
+
+.active-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--admin-accent-red);
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+/* Expanded panels */
+.advanced-filters,
+.filters-panel {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--admin-border);
+    animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .filters-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.date-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .date-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--admin-text-subtle);
+    margin-bottom: 6px;
+}
+
+.filter-input,
+.select-input,
+.date-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+    background-color: var(--admin-white);
+    color: var(--admin-text-dark);
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.filter-input:focus,
+.select-input:focus,
+.date-input:focus {
+    outline: none;
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+/* Active filters tags */
+.active-filters {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: var(--admin-bg-page);
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+}
+
+.active-filters-header {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--admin-text-subtle);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.active-filters-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    background-color: var(--admin-white);
+    color: var(--admin-primary);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.remove-filter {
+    margin-left: 6px;
+    color: var(--admin-text-subtle);
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    font-size: 10px;
+    transition: all 0.2s ease;
+}
+
+.remove-filter:hover {
+    background-color: var(--admin-accent-red);
+    color: white;
+}
+
+/* Action buttons at bottom */
+.filters-actions-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--admin-border);
+}
+
+.clear-all-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+    background-color: var(--admin-white);
+    color: var(--admin-text-subtle);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.clear-all-button:hover {
+    background-color: rgba(239, 68, 68, 0.05);
+    color: var(--admin-accent-red);
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+.apply-filters-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background-color: var(--admin-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: var(--admin-shadow-soft);
+}
+
+.apply-filters-button:hover {
+    background-color: var(--admin-primary-dark);
+    transform: translateY(-1px);
+}
+
+.apply-filters-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}

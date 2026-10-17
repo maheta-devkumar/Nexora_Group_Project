@@ -1,0 +1,145 @@
+/* AdminLayout.css - Premium Structure */
+@import '../../../styles/admin-theme.css';
+
+.ad-layout {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  /* Slate 50 */
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+/* Background Blobs for specific rich look */
+.ad-bg-blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.ad-blob-1 {
+  top: -100px;
+  right: -50px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.05) 100%);
+}
+
+.ad-blob-2 {
+  bottom: -50px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%);
+}
+
+.ad-layout-container {
+  display: flex;
+  min-height: calc(100vh - 76px);
+  /* Adjusted for header */
+  padding-top: 76px;
+  position: relative;
+}
+
+.ad-main-content {
+  flex: 1;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Sidebar States */
+.ad-main-content.sidebar-open {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+}
+
+.ad-main-content.sidebar-collapsed {
+  margin-left: 90px;
+  width: calc(100% - 90px);
+}
+
+.ad-content-header {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 32px 32px 0 32px;
+}
+
+.ad-page-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  letter-spacing: -0.03em;
+}
+
+.ad-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.ad-breadcrumb-separator {
+  color: #cbd5e1;
+}
+
+.ad-breadcrumb-current {
+  color: #6366f1;
+  /* Indigo */
+  font-weight: 600;
+}
+
+.ad-content-wrapper {
+  animation: adFadeIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  max-width: 100%;
+}
+
+@keyframes adFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Overlay */
+.ad-mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 99;
+  animation: adFadeIn 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .ad-layout-container {
+    flex-direction: column;
+  }
+
+  .ad-main-content.sidebar-open,
+  .ad-main-content.sidebar-collapsed {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .ad-content-header {
+    padding: 20px 20px 0 20px;
+  }
+}

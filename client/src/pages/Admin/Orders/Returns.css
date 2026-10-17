@@ -1,0 +1,32 @@
+/* Returns.css (Page) - Premium */
+.page-returns {
+    padding: 32px;
+    background: #f8fafc;
+}
+
+.returns-toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 16px;
+}
+
+.search-bar-modern {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 10px 16px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #64748b;
+}
+
+.search-bar-modern input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    color: #1e293b;
+}

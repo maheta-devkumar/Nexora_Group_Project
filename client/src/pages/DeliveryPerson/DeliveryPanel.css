@@ -1,0 +1,32 @@
+/* DeliveryPanel.css - Scoped */
+
+.dp-panel-loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f9fafb;
+}
+
+.dp-panel-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #e5e7eb;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+    animation: dpPanelSpin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes dpPanelSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.dp-panel-loading-text {
+    color: #6b7280;
+    font-size: 16px;
+    font-weight: 500;
+}

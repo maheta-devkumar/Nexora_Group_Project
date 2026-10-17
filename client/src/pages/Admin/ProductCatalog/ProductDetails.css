@@ -1,0 +1,260 @@
+/* ProductDetails.css - Scoped */
+
+.admin-product-details-page {
+  padding: 32px 40px;
+  background: #f8fafc;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.admin-pd-loading,
+.admin-pd-not-found {
+  padding: 64px;
+  text-align: center;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.admin-pd-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  background: white;
+  padding: 24px 32px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.admin-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.admin-breadcrumb-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.admin-breadcrumb-link:hover {
+  color: #4f46e5;
+}
+
+.admin-breadcrumb-separator {
+  color: #cbd5e1;
+}
+
+.admin-breadcrumb-current {
+  color: #1e293b;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+
+.admin-pd-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.admin-pd-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.admin-edit-form-section {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.admin-pd-basic-info {
+  margin-bottom: 24px;
+}
+
+.admin-pd-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+}
+
+.admin-pd-meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.admin-pd-meta-item {
+  font-size: 14px;
+  color: #475569;
+  display: flex;
+  gap: 6px;
+}
+
+.admin-pd-meta-item strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.admin-pd-status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.admin-tab-content {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 32px;
+  min-height: 400px;
+}
+
+.admin-info-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 1024px) {
+  .admin-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-info-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.admin-info-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #334155;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-info-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.admin-info-label {
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.admin-info-value {
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.admin-pd-description {
+  color: #475569;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.admin-pd-stats {
+  margin-top: 32px;
+}
+
+.admin-pd-stats h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #334155;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.admin-stat-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.admin-stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-stat-label {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.admin-stat-value {
+  font-size: 18px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.admin-variants-header {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

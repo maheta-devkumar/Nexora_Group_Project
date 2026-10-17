@@ -1,0 +1,99 @@
+.ai-message-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.ai-message-row.ai {
+    justify-content: flex-start;
+}
+
+.ai-message-row.user {
+    justify-content: flex-end;
+}
+
+.message-bubble {
+    max-width: 80%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.message-bubble.ai {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    color: #1f2937;
+    /* gray-800 */
+}
+
+.message-bubble.user {
+    background-color: #4f46e5;
+    /* indigo-600 */
+    color: white;
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.sender-name {
+    font-size: 0.75rem;
+    /* text-xs */
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.sender-name.ai {
+    color: #4f46e5;
+    /* indigo-600 */
+}
+
+.sender-name.user {
+    color: #c7d2fe;
+    /* indigo-200 */
+}
+
+.timestamp {
+    font-size: 0.75rem;
+    /* text-xs */
+}
+
+.timestamp.ai {
+    color: #9ca3af;
+    /* gray-400 */
+}
+
+.timestamp.user {
+    color: #c7d2fe;
+    /* indigo-200 */
+}
+
+.message-content {
+    font-size: 0.875rem;
+    /* text-sm */
+    line-height: 1.5;
+}
+
+/* Markdown Styles override for AI messages */
+.message-content.ai p {
+    margin-bottom: 0.5em;
+}
+
+.message-content.ai ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.message-content.ai strong {
+    font-weight: 600;
+    color: #111827;
+    /* gray-900 */
+}
+
+.message-content.user p {
+    white-space: pre-wrap;
+}

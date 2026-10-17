@@ -1,0 +1,216 @@
+.personal-info-card {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.personal-info-card.loading {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.loading-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.card-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-text:hover {
+    background-color: #f3f4f6;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-text.cancel {
+    color: #6b7280;
+}
+
+.btn-text.cancel:hover {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+.btn-text.save {
+    color: #10b981;
+}
+
+.btn-text.save:hover {
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.info-label {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.info-value {
+    font-size: 16px;
+    color: #1f2937;
+    word-break: break-word;
+}
+
+.edit-input,
+.edit-textarea {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+.edit-input:focus,
+.edit-textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.edit-textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+}
+
+@media (max-width: 768px) {
+    .personal-info-card {
+        padding: 20px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .edit-actions {
+        justify-content: center;
+    }
+}
+/* Add this to your existing ProfileDetails.css */
+
+.name-fields {
+    display: flex;
+    gap: 12px;
+}
+
+.name-fields .edit-input {
+    flex: 1;
+}
+
+/* Update existing styles for better spacing */
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Increased from 6px for better spacing */
+}
+
+.info-label {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.info-value {
+    font-size: 16px;
+    color: #1f2937;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+.edit-input,
+.edit-textarea {
+    padding: 10px 12px; /* Slightly increased padding */
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.edit-input:focus,
+.edit-textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.edit-textarea {
+    resize: vertical;
+    min-height: 90px; /* Slightly increased */
+    font-family: inherit;
+}
+
+@media (max-width: 768px) {
+    .name-fields {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .personal-info-card {
+        padding: 16px; /* Reduced padding on mobile */
+    }
+    
+    .info-grid {
+        gap: 16px;
+    }
+}

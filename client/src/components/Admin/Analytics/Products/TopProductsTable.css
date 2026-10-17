@@ -1,0 +1,114 @@
+/* TopProductsTable.css */
+@import '../../../../styles/admin-theme.css';
+
+.top-products-table {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    box-shadow: var(--admin-shadow-sm);
+    padding: 24px;
+    border: 1px solid var(--admin-border);
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.products-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+}
+
+.products-period {
+    font-size: 13px;
+    color: var(--admin-text-subtle);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.products-table {
+    min-width: 100%;
+    border-collapse: collapse;
+}
+
+.table-header {
+    text-align: left;
+    border-bottom: 1px solid var(--admin-border);
+    background-color: var(--admin-bg-page);
+}
+
+.header-cell {
+    padding: 12px 16px;
+    font-size: 11px;
+    color: var(--admin-text-subtle);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.table-row {
+    border-bottom: 1px solid var(--admin-border);
+    transition: all 0.2s ease;
+}
+
+.table-row:hover {
+    background-color: var(--admin-bg-page);
+}
+
+.table-cell {
+    padding: 16px;
+    font-size: 14px;
+}
+
+.product-cell {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+}
+
+.rank-number {
+    color: var(--admin-text-light);
+    margin-right: 8px;
+}
+
+.variant-cell {
+    font-size: 12px;
+    color: var(--admin-text-subtle);
+    margin-top: 4px;
+}
+
+.sold-cell,
+.revenue-cell {
+    color: var(--admin-text-dark);
+    font-weight: 500;
+}
+
+.revenue-cell {
+    color: var(--admin-accent-green);
+    font-weight: 600;
+}
+
+.stock-cell {
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 9999px;
+}
+
+.stock-out {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--admin-accent-red);
+}
+
+.stock-low {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--admin-accent-orange);
+}
+
+.stock-good {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--admin-accent-green);
+}

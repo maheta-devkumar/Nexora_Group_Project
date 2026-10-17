@@ -1,0 +1,153 @@
+/* ProductForm.css - Scoped & Tokenized */
+
+.admin-product-form-section {
+  width: 100%;
+}
+
+.admin-form-section-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--admin-text-primary);
+  margin: 0 0 24px 0;
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--admin-border);
+  background: var(--admin-bg-main);
+  border-radius: var(--border-radius-card) var(--border-radius-card) 0 0;
+}
+
+.admin-product-form {
+  padding: 0 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.admin-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--admin-text-secondary);
+}
+
+.admin-form-input,
+.admin-form-select,
+.admin-form-textarea {
+  padding: 12px 16px;
+  border: 1px solid var(--admin-border);
+  border-radius: var(--border-radius-input);
+  font-size: 15px;
+  color: var(--admin-text-primary);
+  transition: all 0.2s;
+  outline: none;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  background: white;
+}
+
+.admin-form-input:focus,
+.admin-form-select:focus,
+.admin-form-textarea:focus {
+  border-color: var(--admin-primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.admin-form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.admin-input-error {
+  border-color: var(--admin-danger);
+  background-color: var(--admin-danger-bg);
+}
+
+.admin-error-text {
+  font-size: 12px;
+  color: var(--admin-danger);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Form Actions */
+.admin-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--admin-border);
+}
+
+.admin-btn-submit {
+  padding: 12px 32px;
+  background: linear-gradient(135deg, var(--admin-primary) 0%, var(--admin-primary-hover) 100%);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-btn);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  transition: all 0.2s;
+}
+
+.admin-btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+}
+
+.admin-btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.admin-btn-cancel {
+  padding: 12px 24px;
+  background: white;
+  color: var(--admin-text-secondary);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--border-radius-btn);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.admin-btn-cancel:hover {
+  background: var(--admin-bg-hover);
+  color: var(--admin-text-primary);
+}
+
+/* Error Alert */
+.admin-error-alert {
+  background: var(--admin-danger-bg);
+  border: 1px solid var(--admin-danger-bg);
+  color: var(--admin-danger);
+  padding: 16px;
+  border-radius: var(--border-radius-btn);
+  font-size: 14px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-dismiss-btn {
+  background: transparent;
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  color: var(--admin-danger);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-dismiss-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}

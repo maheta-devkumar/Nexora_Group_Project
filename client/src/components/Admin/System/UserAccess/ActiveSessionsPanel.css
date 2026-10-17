@@ -1,0 +1,193 @@
+/* ActiveSessionsPanel.css */
+.active-sessions-panel {
+    background-color: var(--card-bg, #ffffff);
+    border-radius: var(--border-radius-lg, 0.75rem);
+    border: 1px solid var(--border-color, #e2e8f0);
+    overflow: hidden;
+    box-shadow: var(--shadow, 0 1px 3px rgba(0,0,0,0.1));
+}
+
+.active-sessions-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color, #e2e8f0);
+}
+
+.active-sessions-header h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary, #1e293b);
+    margin-bottom: 0.25rem;
+}
+
+.active-sessions-header p {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #64748b);
+    margin: 0;
+}
+
+.active-sessions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.active-sessions-item {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color, #e2e8f0);
+    transition: var(--transition, all 0.3s ease);
+}
+
+.active-sessions-item:hover {
+    background-color: var(--bg-color, #f8fafc);
+}
+
+.active-sessions-item:last-child {
+    border-bottom: none;
+}
+
+.active-sessions-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.active-sessions-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.active-sessions-device {
+    margin-right: 1rem;
+    color: var(--text-secondary, #64748b);
+}
+
+.active-sessions-device.desktop { color: var(--primary-color, #3b82f6); }
+.active-sessions-device.mobile { color: var(--success-color, #10b981); }
+.active-sessions-device.tablet { color: #9333ea; }
+
+.active-sessions-details h4 {
+    font-weight: 600;
+    color: var(--text-primary, #1e293b);
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.active-sessions-role {
+    padding: 0.125rem 0.5rem;
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--primary-color, #3b82f6);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.active-sessions-meta {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--text-secondary, #64748b);
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.active-sessions-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.active-sessions-meta-item .icon {
+    font-size: 0.875rem;
+}
+
+.active-sessions-connection {
+    text-align: right;
+}
+
+.active-sessions-device-type {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #64748b);
+    text-transform: capitalize;
+    margin-bottom: 0.125rem;
+}
+
+.active-sessions-browser {
+    font-size: 0.75rem;
+    color: var(--text-light, #94a3b8);
+}
+
+.active-sessions-location {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-light, #94a3b8);
+}
+
+.active-sessions-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border-color, #e2e8f0);
+    background-color: var(--bg-color, #f8fafc);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.active-sessions-count {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #64748b);
+}
+
+.active-sessions-view-all {
+    color: var(--primary-color, #3b82f6);
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition, all 0.3s ease);
+}
+
+.active-sessions-view-all:hover {
+    color: var(--primary-dark, #2563eb);
+}
+
+.active-sessions-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.active-sessions-loading .spinner {
+    border: 2px solid var(--border-color, #e2e8f0);
+    border-top: 2px solid var(--primary-color, #3b82f6);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+.active-sessions-loading p {
+    color: var(--text-secondary, #64748b);
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.active-sessions-empty {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-secondary, #64748b);
+}
+
+.active-sessions-empty p {
+    margin: 0;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

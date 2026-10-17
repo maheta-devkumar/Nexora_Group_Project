@@ -1,0 +1,61 @@
+/* Products.css - Scoped & Standardized */
+
+.admin-products-page {
+    /* Main wrapper fits into the layout slot */
+    padding: 24px;
+    width: 100%;
+    /* No bg color needed as it's transparent on top of the dashboard bg, or consistent */
+}
+
+/* Modal styling - Scoped */
+.admin-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    /* Higher than header (1000) */
+    animation: fadeIn 0.2s ease-out;
+}
+
+.admin-modal-content {
+    background: var(--admin-bg-card);
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: var(--border-radius-card);
+    padding: 0;
+    /* padding handled inside form */
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--admin-border);
+    animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

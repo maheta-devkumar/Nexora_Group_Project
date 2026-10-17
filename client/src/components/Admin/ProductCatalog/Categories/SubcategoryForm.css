@@ -1,0 +1,16 @@
+/* Separated SubcategoryForm.css */
+.subcat-form-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.parent-category-display {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 16px;
+}

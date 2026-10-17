@@ -1,0 +1,124 @@
+/* ActivityLogTable.css */
+@import '../../../../styles/admin-theme.css';
+
+.activity-log-table {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    box-shadow: var(--admin-shadow-sm);
+    padding: 24px;
+    border: 1px solid var(--admin-border);
+}
+
+.activity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.activity-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+}
+
+.activity-subtitle {
+    font-size: 13px;
+    color: var(--admin-text-subtle);
+}
+
+.log-item {
+    padding: 16px;
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
+    background-color: var(--admin-white);
+}
+
+.log-item:hover {
+    background-color: var(--admin-bg-page);
+    border-color: var(--admin-border-dark);
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.log-action {
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 9999px;
+    display: inline-flex;
+    text-transform: uppercase;
+}
+
+.action-create {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--admin-accent-green);
+}
+
+.action-update {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--admin-accent-blue);
+}
+
+.action-delete {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--admin-accent-red);
+}
+
+.log-meta {
+    font-size: 13px;
+    color: var(--admin-text-subtle);
+    margin-left: 8px;
+    font-weight: 500;
+}
+
+.log-time {
+    font-size: 12px;
+    color: var(--admin-text-light);
+}
+
+.log-details {
+    font-size: 14px;
+    color: var(--admin-text-dark);
+}
+
+.value-diff {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--admin-border);
+}
+
+.diff-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.old-value {
+    background-color: rgba(239, 68, 68, 0.05);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--admin-accent-red);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid rgba(239, 68, 68, 0.1);
+}
+
+.new-value {
+    background-color: rgba(16, 185, 129, 0.05);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--admin-accent-green);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid rgba(16, 185, 129, 0.1);
+}

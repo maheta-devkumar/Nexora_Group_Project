@@ -1,0 +1,15 @@
+/* Separated CategoryTree.css */
+.tree-wrapper {
+  padding: 16px;
+  background: #fcfcfc;
+  border-radius: 12px;
+  min-height: 400px;
+}
+
+.tree-instruction {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 16px;
+  text-align: center;
+  font-style: italic;
+}

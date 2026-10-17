@@ -1,0 +1,285 @@
+/* AdminSidebar.css - Premium Modern Design */
+
+.ad-sidebar {
+  position: fixed;
+  left: 0;
+  top: 76px;
+  /* Matches header height */
+  bottom: 0;
+  background-color: #ffffff;
+  z-index: 999;
+  transition: width 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ad-sidebar::before {
+  /* Subtle border line */
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(226, 232, 240, 0.8) 0%, rgba(226, 232, 240, 0) 100%);
+}
+
+.ad-sidebar.open {
+  width: 280px;
+}
+
+.ad-sidebar.closed {
+  width: 90px;
+}
+
+.ad-sidebar.mobile {
+  width: 280px;
+  transform: translateX(0);
+}
+
+.ad-sidebar.mobile.closed {
+  transform: translateX(-100%);
+  width: 280px;
+}
+
+.ad-sidebar-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  overflow-y: auto;
+  gap: 8px;
+}
+
+/* Home / Quick Action */
+.ad-sidebar-section-top {
+  padding-bottom: 6px;
+}
+
+.ad-home-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+  /* Violet Tint */
+  border: 1px solid #ddd6fe;
+  border-radius: 16px;
+  color: #7c3aed;
+  cursor: pointer;
+  transition: all 0.2s;
+  overflow: hidden;
+  position: relative;
+}
+
+.ad-home-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+}
+
+.ad-home-icon-box {
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7c3aed;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(124, 58, 237, 0.1);
+}
+
+.ad-home-label {
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.ad-sidebar-divider {
+  height: 1px;
+  background: #f1f5f9;
+  margin: 8px 0 16px 0;
+}
+
+/* Menu items */
+.ad-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ad-menu-section-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 16px 0 8px 12px;
+  user-select: none;
+}
+
+.ad-menu-section-title:first-child {
+  margin-top: 0;
+}
+
+.ad-nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.ad-nav-item:hover {
+  background-color: #f8fafc;
+  color: #334155;
+}
+
+.ad-nav-item.active {
+  background-color: #eff6ff;
+  /* Blue/Indigo tint match */
+  color: #4f46e5;
+}
+
+.ad-nav-item.highlight {
+  background: linear-gradient(90deg, #fdf4ff 0%, #fae8ff 100%);
+  color: #d946ef;
+}
+
+.ad-nav-item.active .ad-nav-icon {
+  color: #4f46e5;
+  transform: scale(1.1);
+}
+
+.ad-nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.ad-nav-label {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ad-active-indicator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 24px;
+  background-color: #4f46e5;
+  border-radius: 0 4px 4px 0;
+}
+
+.ad-nav-badge {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 99px;
+  min-width: 20px;
+  text-align: center;
+  background-color: #f1f5f9;
+  color: #64748b;
+}
+
+.ad-nav-badge.new {
+  background: linear-gradient(135deg, #f0abfc 0%, #e879f9 100%);
+  color: white;
+}
+
+/* Footer (Logout) */
+.ad-sidebar-footer {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.ad-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ad-logout-btn:hover {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+/* Scrollbar */
+.ad-sidebar-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ad-sidebar-content::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.ad-sidebar-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Closed State Overrides */
+.ad-sidebar.closed .ad-nav-item,
+.ad-sidebar.closed .ad-logout-btn,
+.ad-sidebar.closed .ad-home-btn {
+  justify-content: center;
+  padding: 16px;
+}
+
+.ad-sidebar.closed .ad-home-btn {
+  background: transparent;
+  border-color: transparent;
+}
+
+.ad-sidebar.closed .ad-home-btn:hover {
+  background: #f5f3ff;
+}
+
+.ad-sidebar.closed .ad-home-icon-box {
+  box-shadow: none;
+  background: transparent;
+}
+
+.ad-sidebar.closed .ad-nav-label,
+.ad-sidebar.closed .ad-menu-section-title,
+.ad-sidebar.closed .ad-active-indicator,
+.ad-sidebar.closed .ad-nav-badge,
+.ad-sidebar.closed .ad-home-label,
+.ad-sidebar.closed .ad-home-chevron {
+  display: none;
+}
+
+.ad-menu-section-divider {
+  height: 1px;
+  background: #f1f5f9;
+  margin: 8px 16px;
+}

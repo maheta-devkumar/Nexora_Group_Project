@@ -1,0 +1,113 @@
+/* AttributeForm.css - Premium */
+.attribute-form-container {
+    padding: 8px;
+}
+
+.form-group-premium {
+    margin-bottom: 20px;
+}
+
+.form-label-premium {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.form-input-premium {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #f8fafc;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.form-input-premium:focus {
+    background: white;
+    border-color: #6366f1;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+.btn-premium-primary {
+    background: #0f172a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.btn-premium-primary:hover {
+    background: #1e293b;
+}
+
+/* AttributeList.css - Premium */
+.attribute-list-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.attribute-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    transition: background 0.2s;
+}
+
+.attribute-row:hover {
+    background: #f8fafc;
+}
+
+.attr-info h4 {
+    margin: 0;
+    font-size: 15px;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.attr-info p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* AttributeUsage.css - Premium */
+.usage-section {
+    padding: 24px;
+}
+
+.usage-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.usage-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.usage-count {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.usage-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+}

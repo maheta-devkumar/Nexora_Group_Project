@@ -1,0 +1,157 @@
+/* BulkTableSelector.css */
+.selector-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+.selector-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.selector-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.selector-icon-box {
+    padding: 0.5rem;
+    background-color: #e0e7ff;
+    border-radius: 0.5rem;
+    color: #4f46e5;
+}
+
+.selector-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.selector-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.selector-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 0.5rem;
+}
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    color: #0f172a;
+    font-size: 0.875rem;
+    font-weight: 500;
+    appearance: none;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+.custom-select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #64748b;
+}
+
+.selector-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.template-hint {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.hint-active {
+    color: #4f46e5;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.btn-download-template {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid #a7f3d0;
+    background-color: #ecfdf5;
+    color: #047857;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-download-template:hover:not(:disabled) {
+    background-color: #d1fae5;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.btn-download-template:disabled {
+    background-color: #f1f5f9;
+    color: #94a3b8;
+    border-color: transparent;
+    cursor: not-allowed;
+}
+
+.selector-error-state {
+    padding: 0.75rem;
+    background-color: #fef2f2;
+    border: 1px solid #fee2e2;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    color: #dc2626;
+    font-size: 0.875rem;
+}
+
+.btn-reload {
+    margin-top: 0.25rem;
+    background: none;
+    border: none;
+    color: #b91c1c;
+    text-decoration: underline;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn-reload:hover {
+    color: #7f1d1d;
+}

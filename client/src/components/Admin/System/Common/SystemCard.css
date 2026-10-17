@@ -1,0 +1,181 @@
+/* SystemCard.css */
+.system-card {
+    border-radius: var(--border-radius-lg, 0.75rem);
+    border: 1px solid;
+    background-color: var(--card-bg, #ffffff);
+    overflow: hidden;
+    transition: var(--transition, all 0.3s ease);
+}
+
+.system-card:hover {
+    box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0,0,0,0.1));
+}
+
+/* Status-based border colors */
+.system-card.border-success,
+.system-card.border-healthy {
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.system-card.border-warning,
+.system-card.border-degraded {
+    border-color: rgba(245, 158, 11, 0.2);
+}
+
+.system-card.border-error,
+.system-card.border-critical,
+.system-card.border-unhealthy {
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+.system-card.border-default {
+    border-color: var(--border-color, #e2e8f0);
+}
+
+/* Status-based background colors */
+.system-card.bg-success,
+.system-card.bg-healthy {
+    background-color: rgba(16, 185, 129, 0.05);
+}
+
+.system-card.bg-warning,
+.system-card.bg-degraded {
+    background-color: rgba(245, 158, 11, 0.05);
+}
+
+.system-card.bg-error,
+.system-card.bg-critical,
+.system-card.bg-unhealthy {
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+.system-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color, #e2e8f0);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.system-card-title {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: var(--text-primary, #1e293b);
+}
+
+.system-card-icon {
+    margin-right: 0.75rem;
+    color: var(--text-secondary, #64748b);
+}
+
+.system-card-status {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    text-transform: capitalize;
+}
+
+.system-card-status.success,
+.system-card-status.healthy {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success-color, #10b981);
+}
+
+.system-card-status.warning,
+.system-card-status.degraded {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning-color, #f59e0b);
+}
+
+.system-card-status.error,
+.system-card-status.critical,
+.system-card-status.unhealthy {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger-color, #ef4444);
+}
+
+.system-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.system-card-refresh-btn {
+    padding: 0.25rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary, #64748b);
+    cursor: pointer;
+    border-radius: var(--border-radius, 0.5rem);
+    transition: var(--transition, all 0.3s ease);
+}
+
+.system-card-refresh-btn:hover {
+    color: var(--text-primary, #1e293b);
+    background-color: var(--bg-color, #f8fafc);
+}
+
+.system-card-refresh-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.system-card-refresh-btn.loading {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.system-card-content {
+    padding: 1rem;
+}
+
+.system-card-error {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: rgba(239, 68, 68, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--border-radius, 0.5rem);
+    color: var(--danger-color, #ef4444);
+    font-size: 0.875rem;
+}
+
+.system-card-error .icon {
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.system-card-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.system-card-loading .spinner {
+    border: 2px solid var(--border-color, #e2e8f0);
+    border-top: 2px solid var(--primary-color, #3b82f6);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    animation: spin 1s linear infinite;
+}
+
+.system-card-empty {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary, #64748b);
+}
+
+.system-card-empty .icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light, #94a3b8);
+}

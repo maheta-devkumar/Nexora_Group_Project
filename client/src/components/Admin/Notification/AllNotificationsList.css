@@ -1,0 +1,129 @@
+/* AllNotificationsList.css */
+@import '../../../styles/admin-theme.css';
+
+.all-notifications-container {
+    min-height: 100vh;
+    background-color: var(--admin-bg-page);
+    padding: 0;
+}
+
+.notifications-header {
+    background: var(--admin-white);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--admin-shadow-sm);
+    border: 1px solid var(--admin-border);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.header-left h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.header-left p {
+    color: var(--admin-text-subtle);
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.header-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-send {
+    background-color: var(--admin-primary);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-send:hover {
+    background-color: var(--admin-primary-dark);
+    box-shadow: var(--admin-shadow-sm);
+}
+
+.btn-refresh {
+    background-color: var(--admin-white);
+    color: var(--admin-text-dark);
+    border: 1px solid var(--admin-border);
+    padding: 10px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-refresh:hover:not(:disabled) {
+    background-color: var(--admin-bg-page);
+    border-color: var(--admin-border);
+}
+
+.btn-refresh:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #f3f4f6;
+}
+
+.error-alert {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.error-icon {
+    color: var(--admin-accent-red);
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.error-content h4 {
+    color: var(--admin-accent-red);
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    font-size: 15px;
+}
+
+.error-content p {
+    color: #dc2626;
+    font-size: 14px;
+    margin: 0;
+}

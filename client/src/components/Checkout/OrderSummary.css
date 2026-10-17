@@ -1,0 +1,200 @@
+/* OrderSummary.css - Premium Sticky Sidebar */
+.order-summary {
+    background: var(--c-bg-card);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    box-shadow: var(--shadow-float);
+    border: 1px solid var(--c-border);
+    position: sticky;
+    top: 40px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.order-summary h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--c-text-main);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--c-border);
+    text-align: left;
+}
+
+.order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 8px;
+    /* space for scrollbar */
+}
+
+/* Custom Scrollbar */
+.order-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.order-items::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.order-items::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 3px;
+}
+
+.order-item {
+    display: flex;
+    gap: 16px;
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: var(--radius-md);
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.order-item:hover {
+    background: white;
+    border-color: var(--c-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.item-image img,
+.image-placeholder {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    background: white;
+    border: 1px solid var(--c-border);
+}
+
+.image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e2e8f0 0%, #f1f5f9 100%);
+    color: white;
+    font-size: 1.2rem;
+}
+
+.item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-details h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--c-text-main);
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.item-details p {
+    font-size: 0.85rem;
+    color: var(--c-text-sec);
+}
+
+.variant {
+    font-style: italic;
+    font-size: 0.8rem;
+    margin-bottom: 2px;
+}
+
+.item-total {
+    font-weight: 700;
+    color: var(--c-text-main);
+    font-size: 1rem;
+    align-self: center;
+}
+
+/* Totals */
+.order-totals {
+    border-top: 1px dashed var(--c-border);
+    padding-top: 24px;
+    margin-bottom: 24px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.total-row span:first-child {
+    color: var(--c-text-sec);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.total-row span:last-child {
+    color: var(--c-text-main);
+    font-weight: 600;
+}
+
+.total-row.grand-total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--c-border);
+    margin-bottom: 0;
+}
+
+.total-row.grand-total span:first-child {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--c-text-main);
+}
+
+.total-row.grand-total span:last-child {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--c-primary);
+    background: linear-gradient(135deg, var(--c-primary) 0%, #4338ca 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Security Badges */
+.order-protection {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 1px solid var(--c-border);
+}
+
+.protection-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--c-text-sec);
+    font-weight: 500;
+}
+
+.protection-item i {
+    color: var(--c-success);
+    font-size: 1.1rem;
+    min-width: 24px;
+    /* Use min-width to prevent squishing/overlap */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .order-summary {
+        position: static;
+        margin-bottom: 40px;
+    }
+}

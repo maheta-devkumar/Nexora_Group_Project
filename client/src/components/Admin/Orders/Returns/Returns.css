@@ -1,0 +1,30 @@
+/* Returns.css - Premium */
+.returns-page {
+    padding: 32px;
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+.returns-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.returns-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}

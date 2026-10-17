@@ -1,0 +1,133 @@
+.active-coupon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #10b981, #0da271);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+  border: none;
+  text-decoration: none;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.active-coupon-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.active-coupon-badge.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.active-coupon-badge i:first-child {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.badge-code {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.badge-discount {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.remove-icon {
+  margin-left: 4px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  transition: all 0.2s;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.remove-icon:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Small variant */
+.active-coupon-badge.small {
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  gap: 6px;
+}
+
+.active-coupon-badge.small .badge-discount {
+  padding: 1px 6px;
+  font-size: 0.7rem;
+}
+
+/* Large variant */
+.active-coupon-badge.large {
+  padding: 12px 20px;
+  font-size: 1rem;
+  gap: 10px;
+}
+
+.active-coupon-badge.large .badge-discount {
+  padding: 3px 10px;
+  font-size: 0.9rem;
+}
+
+/* Clickable state */
+.active-coupon-badge.clickable {
+  cursor: pointer;
+}
+
+.active-coupon-badge.clickable:hover {
+  background: linear-gradient(135deg, #0da271, #0b8a5c);
+  transform: scale(1.02);
+}
+
+/* Disabled state */
+.active-coupon-badge.disabled {
+  background: linear-gradient(135deg, #9ca3af, #6b7280);
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.active-coupon-badge.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .active-coupon-badge {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .badge-discount {
+    font-size: 0.75rem;
+    padding: 1px 6px;
+  }
+}

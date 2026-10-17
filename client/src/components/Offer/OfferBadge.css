@@ -1,0 +1,86 @@
+.offer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  border-radius: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  user-select: none;
+  border: none;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  animation: pulse 2s infinite;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.5);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+  }
+}
+
+.offer-badge i {
+  font-size: 0.8rem;
+}
+
+.badge-text {
+  font-weight: 800;
+}
+
+/* Size variations */
+.offer-badge.small {
+  padding: 4px 10px;
+  font-size: 0.7rem;
+  gap: 4px;
+}
+
+.offer-badge.small i {
+  font-size: 0.6rem;
+}
+
+.offer-badge.medium {
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  gap: 6px;
+}
+
+.offer-badge.large {
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  gap: 8px;
+}
+
+.offer-badge.large i {
+  font-size: 1rem;
+}
+
+/* Hover effect */
+.offer-badge:hover {
+  background: linear-gradient(135deg, #d97706, #b45309);
+  transform: scale(1.05);
+  transition: all 0.2s;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .offer-badge.medium {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+  }
+  
+  .offer-badge.large {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+}

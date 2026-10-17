@@ -1,0 +1,302 @@
+/* CategoryList.css - Scoped & Tokenized */
+
+.admin-category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Header & Controls */
+.admin-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--admin-bg-card);
+  padding: 20px 24px;
+  border-radius: var(--border-radius-card);
+  border: 1px solid var(--admin-border);
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.admin-search-controls {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.admin-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.admin-search-box i {
+  position: absolute;
+  left: 12px;
+  color: var(--admin-text-muted);
+}
+
+.admin-search-input {
+  width: 100%;
+  padding: 10px 12px 10px 36px;
+  border: 1px solid var(--admin-border);
+  border-radius: var(--border-radius-input);
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s;
+  background: var(--admin-bg-main);
+  color: var(--admin-text-primary);
+}
+
+.admin-search-input:focus {
+  border-color: var(--admin-primary);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.admin-clear-search {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--admin-text-muted);
+  cursor: pointer;
+  padding: 0;
+}
+
+.admin-sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-sort-label {
+  font-size: 14px;
+  color: var(--admin-text-secondary);
+  font-weight: 500;
+}
+
+.admin-sort-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-sort-btn {
+  padding: 6px 12px;
+  border: 1px solid var(--admin-border);
+  border-radius: 6px;
+  background: white;
+  font-size: 13px;
+  color: var(--admin-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.admin-sort-btn:hover {
+  background: var(--admin-bg-hover);
+  color: var(--admin-text-primary);
+}
+
+.admin-sort-btn.active {
+  background: var(--admin-bg-hover);
+  color: var(--admin-primary);
+  border-color: var(--admin-primary);
+  font-weight: 600;
+}
+
+/* Category Grid/List */
+.admin-categories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-category-card {
+  background: var(--admin-bg-card);
+  border-radius: var(--border-radius-card);
+  border: 1px solid var(--admin-border);
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.admin-category-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--admin-border-focus);
+}
+
+.admin-category-header-row {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+}
+
+.admin-category-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-expand-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--admin-border);
+  background: var(--admin-bg-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--admin-text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.admin-expand-btn:hover {
+  background: white;
+  color: var(--admin-primary);
+  border-color: var(--admin-primary);
+}
+
+.admin-category-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--admin-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-category-id {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--admin-text-muted);
+  background: var(--admin-bg-main);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--admin-border);
+}
+
+.admin-category-description {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: var(--admin-text-secondary);
+}
+
+.admin-category-actions {
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  /* Hidden by default until hover */
+  transition: opacity 0.2s;
+}
+
+.admin-category-card:hover .admin-category-actions {
+  opacity: 1;
+}
+
+.admin-action-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.admin-action-btn.edit {
+  background: var(--admin-bg-hover);
+  color: var(--admin-text-secondary);
+}
+
+.admin-action-btn.edit:hover {
+  background: white;
+  border-color: var(--admin-border);
+  color: var(--admin-text-primary);
+}
+
+.admin-action-btn.add-sub {
+  background: var(--admin-primary-light);
+  color: var(--admin-primary);
+}
+
+.admin-action-btn.add-sub:hover {
+  background: #e0e7ff;
+}
+
+.admin-action-btn.delete {
+  background: var(--admin-danger-bg);
+  color: var(--admin-danger);
+  opacity: 0.8;
+}
+
+.admin-action-btn.delete:hover {
+  opacity: 1;
+}
+
+/* Subcategories Section */
+.admin-subcategories-section {
+  background: var(--admin-bg-main);
+  padding: 20px 20px 20px 68px;
+  /* Indent to align with text */
+  border-top: 1px solid var(--admin-border);
+}
+
+.admin-subcategories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.admin-subcategories-header h4 {
+  margin: 0;
+  font-size: 14px;
+  color: var(--admin-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-subcategories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+/* Empty States */
+.admin-no-subcategories {
+  text-align: center;
+  padding: 24px;
+  border: 2px dashed var(--admin-border);
+  border-radius: 12px;
+  color: var(--admin-text-muted);
+}
+
+.admin-add-first-btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid var(--admin-border);
+  border-radius: 6px;
+  color: var(--admin-primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-add-first-btn:hover {
+  background: var(--admin-primary-light);
+  border-color: var(--admin-primary);
+}

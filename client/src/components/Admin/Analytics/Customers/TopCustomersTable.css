@@ -1,0 +1,74 @@
+/* TopCustomersTable.css */
+@import '../../../../styles/admin-theme.css';
+
+.top-customers-table {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--admin-border);
+    box-shadow: var(--admin-shadow-sm);
+}
+
+.table-title {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.table {
+    min-width: 100%;
+    border-collapse: collapse;
+}
+
+.table-header {
+    text-align: left;
+    background-color: var(--admin-bg-page);
+}
+
+.header-cell {
+    padding: 12px 16px;
+    font-size: 12px;
+    color: var(--admin-text-subtle);
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 2px solid var(--admin-border);
+}
+
+.table-row {
+    border-bottom: 1px solid var(--admin-border);
+    transition: background-color 0.2s;
+}
+
+.table-row:hover {
+    background-color: var(--admin-bg-page);
+}
+
+.table-cell {
+    padding: 12px 16px;
+    font-size: 14px;
+}
+
+.customer-cell {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+}
+
+.email-cell {
+    font-size: 13px;
+    color: var(--admin-text-subtle);
+}
+
+.orders-cell {
+    color: var(--admin-text-dark);
+    font-size: 14px;
+}
+
+.spent-cell {
+    font-weight: 700;
+    color: var(--admin-accent-green);
+}

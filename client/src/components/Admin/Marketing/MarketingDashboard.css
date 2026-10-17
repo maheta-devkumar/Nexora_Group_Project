@@ -1,0 +1,354 @@
+/* MarketingDashboard.css */
+@import '../../../styles/admin-theme.css';
+
+.marketing-dashboard {
+    background-color: var(--admin-bg-page);
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.dashboard-header {
+    margin-bottom: 24px;
+}
+
+.stats-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.stat-card {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: var(--admin-shadow-soft);
+    transition: all 0.2s ease;
+    border: 1px solid var(--admin-border);
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--admin-shadow-lg);
+}
+
+.stat-info h3 {
+    margin: 0 0 12px 0;
+    color: var(--admin-text-subtle);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.stat-value {
+    margin: 0 0 4px 0;
+    color: var(--admin-text-dark);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.stat-subtitle {
+    margin: 0;
+    color: var(--admin-primary);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Alert Styles */
+.alert {
+    padding: 16px 24px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    animation: slideIn 0.3s ease;
+}
+
+.alert-error {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    color: var(--admin-accent-red);
+}
+
+/* Content Styles */
+.dashboard-content {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    box-shadow: var(--admin-shadow-soft);
+    overflow: hidden;
+    border: 1px solid var(--admin-border);
+}
+
+/* Controls Header */
+.content-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--admin-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    background-color: var(--admin-white);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--admin-bg-page);
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+    padding: 10px 16px;
+    min-width: 300px;
+    transition: all 0.2s ease;
+}
+
+.search-box:focus-within {
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-box svg {
+    color: var(--admin-text-light);
+    margin-right: 12px;
+    font-size: 14px;
+}
+
+.search-box input {
+    border: none;
+    background: none;
+    flex: 1;
+    color: var(--admin-text-dark);
+    font-size: 14px;
+    outline: none;
+    min-width: 0;
+}
+
+.search-box input::placeholder {
+    color: var(--admin-text-light);
+}
+
+/* Filter Dropdown */
+.header-actions>div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--admin-bg-page);
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+    padding: 10px 16px;
+}
+
+.header-actions>div:last-child svg {
+    color: var(--admin-text-light);
+    font-size: 14px;
+}
+
+.header-actions select {
+    border: none;
+    background: none;
+    color: var(--admin-text-dark);
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+/* Create Buttons */
+.content-header>div:last-child {
+    display: flex;
+    gap: 12px;
+}
+
+.content-header button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    box-shadow: var(--admin-shadow-soft);
+}
+
+.content-header button:hover {
+    transform: translateY(-2px);
+}
+
+.content-header button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.content-header button:first-child {
+    background-color: var(--admin-primary);
+    color: white;
+}
+
+.content-header button:first-child:hover {
+    background-color: var(--admin-primary-dark);
+}
+
+.content-header button:last-child {
+    background-color: var(--admin-white);
+    color: var(--admin-primary);
+    border: 1px solid var(--admin-primary);
+}
+
+.content-header button:last-child:hover {
+    background-color: var(--admin-bg-page);
+}
+
+/* Tabs Navigation */
+.tabs-navigation {
+    display: flex;
+    background-color: var(--admin-bg-page);
+    border-bottom: 1px solid var(--admin-border);
+    padding: 0 24px;
+}
+
+.tabs-navigation button {
+    padding: 16px 24px;
+    border: none;
+    background: none;
+    color: var(--admin-text-subtle);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tabs-navigation button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.tabs-navigation button:hover:not(:disabled) {
+    color: var(--admin-text-dark);
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.tabs-navigation button:first-child.active {
+    color: var(--admin-primary);
+    border-bottom-color: var(--admin-primary);
+}
+
+.tabs-navigation button:last-child.active {
+    color: var(--admin-accent-red);
+    border-bottom-color: var(--admin-accent-red);
+}
+
+/* Tab Content */
+.tab-content {
+    padding: 24px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: var(--admin-primary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .marketing-dashboard {
+        padding: 0;
+    }
+
+    .content-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .header-actions {
+        justify-content: space-between;
+    }
+
+    .search-box {
+        min-width: 250px;
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .marketing-dashboard {
+        padding: 0;
+    }
+
+    .stats-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .content-header {
+        padding: 16px;
+    }
+
+    .header-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .search-box {
+        min-width: 100%;
+    }
+
+    .header-actions>div:last-child {
+        justify-content: space-between;
+    }
+
+    .content-header>div:last-child {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tabs-navigation {
+        padding: 0 16px;
+    }
+
+    .tabs-navigation button {
+        padding: 12px;
+        flex: 1;
+        justify-content: center;
+        font-size: 13px;
+    }
+
+    .tab-content {
+        padding: 16px;
+    }
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

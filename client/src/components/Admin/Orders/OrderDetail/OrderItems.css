@@ -1,0 +1,202 @@
+/* OrderItems.css - Scoped */
+
+.admin-oitems-wrapper {
+    width: 100%;
+}
+
+.admin-oitems-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.admin-oitems-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.admin-oitems-total-badge {
+    background: #f1f5f9;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-oitems-total-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.admin-oitems-total-amount {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4f46e5;
+}
+
+.admin-oitems-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    text-align: center;
+    color: #94a3b8;
+}
+
+.admin-oitems-empty-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.admin-oitems-table-container {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.admin-oitems-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.admin-oitems-table th {
+    text-align: left;
+    padding: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #64748b;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-oitems-table td {
+    padding: 16px;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+    color: #1e293b;
+    font-size: 14px;
+}
+
+.admin-oitems-table tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-oitems-product-cell {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-oitems-product-name {
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 2px;
+}
+
+.admin-oitems-product-variant {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.admin-oitems-price {
+    font-family: 'ui-monospace', 'SFMono-Regular', 'Menlo', monospace;
+    font-weight: 500;
+}
+
+.admin-oitems-total {
+    font-family: 'ui-monospace', 'SFMono-Regular', 'Menlo', monospace;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.admin-oitems-edit-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-oitems-qty-input {
+    width: 60px;
+    padding: 4px 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.admin-oitems-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.admin-oitems-btn-save {
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background: #10b981;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.admin-oitems-btn-cancel {
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.admin-oitems-qty-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-oitems-qty-val {
+    font-weight: 500;
+    color: #1e293b;
+}
+
+.admin-oitems-btn-edit {
+    font-size: 12px;
+    color: #4f46e5;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.admin-oitems-btn-edit:hover {
+    text-decoration: underline;
+}
+
+.admin-oitems-btn-remove {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ef4444;
+    background: white;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.admin-oitems-btn-remove:hover {
+    background: #fef2f2;
+}

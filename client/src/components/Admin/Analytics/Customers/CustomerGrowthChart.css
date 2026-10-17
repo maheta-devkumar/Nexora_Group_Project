@@ -1,0 +1,32 @@
+/* CustomerGrowthChart.css */
+@import '../../../../styles/admin-theme.css';
+
+.customer-growth-chart {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--admin-border);
+    box-shadow: var(--admin-shadow-sm);
+}
+
+.chart-title {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.chart-container {
+    height: 250px;
+    background-color: var(--admin-bg-page);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--admin-border);
+}
+
+.placeholder-text {
+    color: var(--admin-text-subtle);
+    font-weight: 500;
+}

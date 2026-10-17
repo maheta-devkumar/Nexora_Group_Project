@@ -1,0 +1,91 @@
+/* ProductPerformance.css */
+@import '../../../../styles/admin-theme.css';
+
+.product-performance {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid var(--admin-border);
+    box-shadow: var(--admin-shadow-sm);
+}
+
+.performance-title {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.performance-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.performance-item {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.performance-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-name {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    font-size: 14px;
+}
+
+.item-variant {
+    font-size: 12px;
+    color: var(--admin-text-subtle);
+    margin-top: 4px;
+}
+
+.conversion-rate {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--admin-text-primary);
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.views-metric {
+    color: var(--admin-primary);
+}
+
+.carts-metric {
+    color: var(--admin-accent-orange);
+}
+
+.purchases-metric {
+    color: var(--admin-accent-green);
+}
+
+.metric-label {
+    font-size: 11px;
+    color: var(--admin-text-subtle);
+}

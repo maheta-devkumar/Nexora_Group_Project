@@ -1,0 +1,157 @@
+.verification-card {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.verification-card.loading {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.verification-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.verification-card .card-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.verification-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.verification-status.verified {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.verification-status.pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.verification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.verification-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.verification-item:hover {
+    background-color: #f3f4f6;
+}
+
+.doc-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.doc-info i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    color: #3b82f6;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.doc-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.doc-info strong {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.doc-info span {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.icon-btn:hover {
+    background-color: white;
+    color: #3b82f6;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.icon-btn:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .verification-card {
+        padding: 20px;
+    }
+
+    .verification-card .card-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .verification-status {
+        align-self: flex-start;
+    }
+
+    .verification-item {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    .doc-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .icon-btn {
+        align-self: center;
+    }
+}

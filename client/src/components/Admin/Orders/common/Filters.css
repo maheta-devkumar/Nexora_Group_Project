@@ -1,0 +1,219 @@
+/* Filters.css - Scoped */
+
+.admin-orders-filters-wrapper {
+    width: 100%;
+    margin-bottom: 24px;
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.admin-of-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admin-of-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 24px;
+    align-items: start;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 1000px) {
+    .admin-of-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.admin-of-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.admin-of-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Inputs Common */
+.admin-of-input,
+.admin-of-select {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    height: 42px;
+    box-sizing: border-box;
+}
+
+.admin-of-input:focus,
+.admin-of-select:focus {
+    outline: none;
+    border-color: #6366f1;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.admin-of-input::placeholder {
+    color: #94a3b8;
+}
+
+/* Search Specific */
+.admin-of-search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.admin-of-input-search {
+    padding-left: 40px;
+    padding-right: 32px;
+}
+
+.admin-of-search-icon {
+    position: absolute;
+    left: 14px;
+    color: #94a3b8;
+    font-size: 16px;
+    pointer-events: none;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.admin-of-clear-icon-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+}
+
+.admin-of-clear-icon-btn:hover {
+    color: #ef4444;
+}
+
+/* Select Specific */
+.admin-of-select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.admin-of-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2rem;
+}
+
+.admin-of-select-icon {
+    position: absolute;
+    right: 14px;
+    color: #94a3b8;
+    font-size: 16px;
+    pointer-events: none;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Date Inputs */
+.admin-of-date-inputs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-of-date-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.admin-of-date-separator {
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* Actions */
+.admin-of-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.admin-of-btn-apply {
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.admin-of-btn-apply:hover {
+    background-color: #1e293b;
+    transform: translateY(-1px);
+}
+
+.admin-of-btn-clear {
+    background: white;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-of-btn-clear:hover {
+    border-color: #ef4444;
+    color: #ef4444;
+    background: #fef2f2;
+}
+
+/* Specific span for date range, if needed to span columns */
+.admin-of-span-2 {
+    grid-column: span 2;
+}
+
+@media (max-width: 1000px) {
+    .admin-of-span-2 {
+        grid-column: span 1;
+    }
+}

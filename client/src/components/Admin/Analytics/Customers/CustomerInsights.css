@@ -1,0 +1,139 @@
+/* CustomerInsights.css */
+@import '../../../../styles/admin-theme.css';
+
+.customer-insights {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    box-shadow: var(--admin-shadow-sm);
+    padding: 24px;
+    border: 1px solid var(--admin-border);
+}
+
+.insights-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.insights-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+}
+
+.insights-updated {
+    font-size: 12px;
+    color: var(--admin-text-subtle);
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.metric-item {
+    background-color: var(--admin-bg-page);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid var(--admin-border);
+}
+
+.metric-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+    margin-bottom: 4px;
+}
+
+.metric-label {
+    font-size: 13px;
+    color: var(--admin-text-subtle);
+}
+
+.top-customers-title {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.customers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.customer-item {
+    background-color: var(--admin-white);
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+}
+
+.customer-item:hover {
+    background-color: var(--admin-bg-page);
+    border-color: var(--admin-primary);
+    transform: translateX(4px);
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+}
+
+.customer-rank {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.customer-number {
+    color: var(--admin-accent-blue);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.customer-name {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    font-size: 14px;
+}
+
+.customer-email {
+    font-size: 12px;
+    color: var(--admin-text-subtle);
+}
+
+.customer-stats {
+    text-align: right;
+}
+
+.customer-spent {
+    font-weight: 700;
+    color: var(--admin-accent-green);
+    font-size: 14px;
+}
+
+.customer-orders {
+    font-size: 12px;
+    color: var(--admin-text-subtle);
+}

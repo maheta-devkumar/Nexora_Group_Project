@@ -1,0 +1,52 @@
+/* Separated SubcategoryCard.css */
+.card-subcat {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card-subcat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card-subcat-img-wrapper {
+  height: 120px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-subcat-info {
+  padding: 16px;
+  text-align: center;
+}
+
+.card-subcat-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 4px;
+}
+
+.card-subcat-count {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.card-actions {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.card-subcat:hover .card-actions {
+  opacity: 1;
+}

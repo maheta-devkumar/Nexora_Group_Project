@@ -1,0 +1,45 @@
+/* OrdersLayout.css - Premium */
+.orders-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--admin-bg-main);
+}
+
+.orders-sidebar {
+  width: 260px;
+  background: var(--admin-bg-card);
+  border-right: 1px solid var(--admin-border);
+  padding: 24px;
+  flex-shrink: 0;
+}
+
+.orders-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: var(--border-radius-btn);
+  color: var(--admin-text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 4px;
+  transition: all 0.2s;
+}
+
+.orders-nav-item:hover {
+  background: var(--admin-bg-hover);
+  color: var(--admin-text-primary);
+}
+
+.orders-nav-item.active {
+  background: var(--admin-primary-light);
+  color: var(--admin-primary);
+  font-weight: 600;
+}
+
+.layout-content {
+  flex: 1;
+  padding: 0;
+  /* Pages handle their own padding */
+  overflow-x: hidden;
+}

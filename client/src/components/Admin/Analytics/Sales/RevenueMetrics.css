@@ -1,0 +1,61 @@
+/* RevenueMetrics.css */
+@import '../../../../styles/admin-theme.css';
+
+.revenue-metrics {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid var(--admin-border);
+    box-shadow: var(--admin-shadow-sm);
+}
+
+.metrics-title {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.metrics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.metric-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.metric-label {
+    color: var(--admin-text-subtle);
+    font-size: 13px;
+}
+
+.metric-value {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    font-size: 14px;
+}
+
+.refund-amount {
+    color: var(--admin-accent-red);
+}
+
+.net-revenue {
+    color: var(--admin-accent-green);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.metrics-divider {
+    border-top: 1px solid var(--admin-border);
+    padding-top: 12px;
+    margin-top: 4px;
+}
+
+.cancelled-orders {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+}

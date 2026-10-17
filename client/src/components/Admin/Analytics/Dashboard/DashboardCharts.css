@@ -1,0 +1,33 @@
+/* DashboardCharts.css */
+@import '../../../../styles/admin-theme.css';
+
+.dashboard-charts {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    box-shadow: var(--admin-shadow-sm);
+    padding: 24px;
+    border: 1px solid var(--admin-border);
+}
+
+.charts-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    margin-bottom: 16px;
+}
+
+.chart-placeholder {
+    height: 300px;
+    background-color: var(--admin-bg-page);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--admin-border);
+}
+
+.placeholder-message {
+    color: var(--admin-text-subtle);
+    font-size: 14px;
+    font-weight: 500;
+}

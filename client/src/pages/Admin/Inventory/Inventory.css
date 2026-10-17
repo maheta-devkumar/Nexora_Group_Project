@@ -1,0 +1,172 @@
+/* Inventory.css - Premium Top Nav Layout */
+:root {
+    --inv-primary: #6366f1;
+    --inv-bg: #f8fafc;
+    --inv-card: #ffffff;
+    --inv-border: #e2e8f0;
+    --inv-text-main: #1e293b;
+    --inv-text-muted: #64748b;
+    --inv-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.inventory-page-premium {
+    background-color: var(--inv-bg);
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top Navigation Bar */
+.inventory-top-nav {
+    background: white;
+    border-bottom: 1px solid var(--inv-border);
+    padding: 0 32px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--inv-shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 48px;
+}
+
+.nav-icon-main {
+    font-size: 24px;
+}
+
+.nav-title-main {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--inv-text-main);
+    letter-spacing: -0.025em;
+}
+
+.nav-modules {
+    display: flex;
+    gap: 8px;
+    flex: 1;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Hide scrollbar */
+}
+
+.nav-module-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--inv-text-muted);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.nav-module-btn:hover {
+    background: #f1f5f9;
+    color: var(--inv-text-main);
+}
+
+.nav-module-btn.active {
+    background: #eef2ff;
+    color: var(--inv-primary);
+    border-color: #c7d2fe;
+}
+
+.btn-icon {
+    font-size: 16px;
+}
+
+.nav-actions {
+    margin-left: 24px;
+}
+
+.nav-refresh-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--inv-border);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav-refresh-btn:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* Main Content */
+.inventory-main-content {
+    padding: 32px;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.module-header-premium {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.module-page-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--inv-text-main);
+    margin: 0;
+}
+
+/* Premium Tabs */
+.premium-tabs {
+    display: flex;
+    background: #e2e8f0;
+    padding: 4px;
+    border-radius: 12px;
+}
+
+.premium-tab {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 14px;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.premium-tab.active {
+    background: white;
+    color: var(--inv-text-main);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.premium-content-body {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--inv-border);
+    padding: 24px;
+    min-height: 500px;
+    /* Ensure visual weight */
+}

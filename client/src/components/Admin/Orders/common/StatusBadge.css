@@ -1,0 +1,122 @@
+/* StatusBadge.css - Premium */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+}
+
+/* Order Status */
+.status-badge.order.placed {
+    background-color: #eff6ff;
+    /* Blue 50 */
+    color: #2563eb;
+    /* Blue 600 */
+    border: 1px solid #dbeafe;
+}
+
+.status-badge.order.processing {
+    background-color: #fff7ed;
+    /* Orange 50 */
+    color: #ea580c;
+    /* Orange 600 */
+    border: 1px solid #ffedd5;
+}
+
+.status-badge.order.shipped {
+    background-color: #f5f3ff;
+    /* Violet 50 */
+    color: #7c3aed;
+    /* Violet 600 */
+    border: 1px solid #ede9fe;
+}
+
+.status-badge.order.delivered,
+.status-badge.order.completed {
+    background-color: #ecfdf5;
+    /* Emerald 50 */
+    color: #059669;
+    /* Emerald 600 */
+    border: 1px solid #a7f3d0;
+}
+
+.status-badge.order.cancelled,
+.status-badge.order.rejected {
+    background-color: #fef2f2;
+    /* Red 50 */
+    color: #dc2626;
+    /* Red 600 */
+    border: 1px solid #fee2e2;
+}
+
+/* Payment Status */
+.status-badge.payment.pending {
+    background-color: #fffbeb;
+    /* Amber 50 */
+    color: #d97706;
+    /* Amber 600 */
+    border: 1px solid #fce7f3;
+}
+
+.status-badge.payment.success,
+.status-badge.payment.paid,
+.status-badge.payment.completed {
+    background-color: #ecfdf5;
+    color: #059669;
+    border: 1px solid #a7f3d0;
+}
+
+.status-badge.payment.failed {
+    background-color: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fee2e2;
+}
+
+.status-badge.payment.refunded {
+    background-color: #fdf2f8;
+    /* Pink 50 */
+    color: #db2777;
+    /* Pink 600 */
+    border: 1px solid #fce7f3;
+}
+
+/* Return/Refund Status */
+.status-badge.return.requested,
+.status-badge.refund.pending {
+    background-color: #fff7ed;
+    color: #c2410c;
+    border: 1px solid #ffedd5;
+}
+
+.status-badge.return.approved,
+.status-badge.refund.processing {
+    background-color: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #dbeafe;
+}
+
+.status-badge.return.completed,
+.status-badge.refund.completed {
+    background-color: #ecfdf5;
+    color: #059669;
+    border: 1px solid #a7f3d0;
+}
+
+.status-badge.return.rejected {
+    background-color: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fee2e2;
+}
+
+/* Default */
+.status-badge.default {
+    background-color: #f1f5f9;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+}

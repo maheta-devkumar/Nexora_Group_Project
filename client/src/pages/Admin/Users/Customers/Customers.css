@@ -1,0 +1,9 @@
+/* Customers.css - Scoped */
+
+.admin-cp-container {
+    padding: 32px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: 100vh;
+}

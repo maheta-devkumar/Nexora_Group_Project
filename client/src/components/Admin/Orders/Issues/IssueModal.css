@@ -1,0 +1,31 @@
+/* IssueModal.css - Premium */
+.issue-details {
+    background: #fff1f2;
+    /* Light Red bg for issues */
+    border: 1px solid #fecdd3;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.issue-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #9f1239;
+    text-transform: uppercase;
+}
+
+.issue-desc {
+    font-size: 15px;
+    color: #881337;
+    margin-top: 4px;
+}
+
+.resolution-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.status-select-container {
+    margin-bottom: 20px;
+}

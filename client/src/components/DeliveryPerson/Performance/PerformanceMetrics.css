@@ -1,0 +1,40 @@
+/* Loading Skeletons */
+.metric-card.loading {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.metric-title-skeleton {
+    height: 20px;
+    width: 150px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.metric-trend-skeleton {
+    height: 20px;
+    width: 60px;
+    background: #e5e7eb;
+    border-radius: 10px;
+}
+
+.metric-value-skeleton {
+    height: 32px;
+    width: 100px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.metric-progress-skeleton {
+    height: 8px;
+    width: 100%;
+    background: #e5e7eb;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}

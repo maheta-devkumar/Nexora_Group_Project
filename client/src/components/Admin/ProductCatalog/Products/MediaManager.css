@@ -1,0 +1,263 @@
+/* MediaManager.css - Scoped */
+.admin-media-manager {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.admin-mm-error {
+  padding: 16px;
+  background: #fee2e2;
+  border-bottom: 1px solid #fecaca;
+  color: #b91c1c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-mm-dismiss-btn {
+  background: white;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-media-tabs {
+  display: flex;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0 24px;
+}
+
+.admin-media-tab {
+  padding: 16px 24px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.admin-media-tab.admin-active {
+  color: #4f46e5;
+  border-bottom-color: #4f46e5;
+}
+
+.admin-media-content {
+  padding: 24px;
+}
+
+.admin-mm-upload-section {
+  margin-bottom: 32px;
+}
+
+.admin-mm-upload-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+}
+
+.admin-mm-upload-area {
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  background: #f8fafc;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-mm-upload-area:hover {
+  border-color: #4f46e5;
+  background: #eef2ff;
+}
+
+.admin-mm-upload-input {
+  display: none;
+}
+
+.admin-mm-upload-icon {
+  font-size: 32px;
+}
+
+.admin-mm-upload-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.admin-mm-upload-hint {
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.admin-mm-progress {
+  width: 100%;
+  max-width: 300px;
+}
+
+.admin-mm-progress-bar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.admin-mm-progress-fill {
+  height: 100%;
+  background: #4f46e5;
+  transition: width 0.3s ease;
+}
+
+.admin-mm-progress-text {
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.admin-mm-loading,
+.admin-mm-empty {
+  padding: 48px;
+  text-align: center;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.admin-mm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.admin-mm-item {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s;
+}
+
+.admin-mm-item:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.admin-mm-preview {
+  aspect-ratio: 16/9;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-mm-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8;
+  padding: 12px;
+  text-align: center;
+}
+
+.admin-mm-default-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #4f46e5;
+  color: white;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.admin-mm-info {
+  padding: 12px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-mm-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-mm-meta {
+  font-size: 11px;
+  color: #64748b;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-mm-actions {
+  padding: 8px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 8px;
+}
+
+.admin-mm-btn {
+  flex: 1;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.admin-mm-btn-default {
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: #4f46e5;
+}
+
+.admin-mm-btn-default:hover {
+  background: #eef2ff;
+  border-color: #6366f1;
+}
+
+.admin-mm-btn-delete {
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: #ef4444;
+}
+
+.admin-mm-btn-delete:hover {
+  background: #fef2f2;
+  border-color: #fecaca;
+}

@@ -1,0 +1,239 @@
+/* OrderCard.css */
+.order-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-color: rgba(102, 126, 234, 0.2);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+.order-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2d3436;
+    margin-bottom: 4px;
+}
+
+.order-date {
+    font-size: 14px;
+    color: #636e72;
+}
+
+.order-items-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.order-item-preview {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.order-item-preview:hover {
+    background: #e9ecef;
+}
+
+.item-image-placeholder {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.item-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+.item-quantity {
+    font-size: 12px;
+    color: #636e72;
+}
+
+.more-items {
+    text-align: center;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #636e72;
+    font-weight: 500;
+}
+
+.order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #f8f9fa;
+}
+
+.order-total {
+    font-size: 18px;
+    color: #2d3436;
+}
+
+.order-total strong {
+    color: #667eea;
+    font-size: 20px;
+}
+
+.order-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-view-order,
+.btn-track-order,
+.btn-reorder {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-view-order {
+    background: #667eea;
+    color: white;
+}
+
+.btn-view-order:hover {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-track-order {
+    background: #00b894;
+    color: white;
+}
+
+.btn-track-order:hover {
+    background: #00a885;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3);
+}
+
+.btn-reorder {
+    background: #fdcb6e;
+    color: #2d3436;
+}
+
+.btn-reorder:hover {
+    background: #fcb93d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(253, 203, 110, 0.3);
+}
+
+.order-tracking,
+.order-delivery,
+.order-estimated-delivery {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #636e72;
+}
+
+.order-tracking i {
+    color: #667eea;
+}
+
+.order-delivery i {
+    color: #00b894;
+}
+
+.order-estimated-delivery i {
+    color: #fdcb6e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-card {
+        padding: 20px;
+    }
+    
+    .order-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .order-footer {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    .order-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .btn-view-order,
+    .btn-track-order,
+    .btn-reorder {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-actions {
+        flex-direction: column;
+    }
+    
+    .btn-view-order,
+    .btn-track-order,
+    .btn-reorder {
+        width: 100%;
+    }
+}

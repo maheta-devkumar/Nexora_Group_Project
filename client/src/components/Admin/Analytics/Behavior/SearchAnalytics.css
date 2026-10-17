@@ -1,0 +1,140 @@
+/* SearchAnalytics.css */
+@import '../../../../styles/admin-theme.css';
+
+.search-analytics {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    box-shadow: var(--admin-shadow-sm);
+    padding: 24px;
+    border: 1px solid var(--admin-border);
+}
+
+.search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.search-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+}
+
+.success-rate {
+    font-size: 13px;
+    padding: 4px 12px;
+    background-color: rgba(16, 185, 129, 0.1);
+    border-radius: 20px;
+}
+
+.rate-value {
+    color: var(--admin-accent-green);
+    font-weight: 600;
+}
+
+.rate-label {
+    color: var(--admin-text-subtle);
+    margin-left: 4px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background-color: var(--admin-bg-page);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid var(--admin-border);
+}
+
+.stat-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--admin-text-subtle);
+}
+
+.top-searches-title {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.search-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.search-item {
+    background-color: var(--admin-white);
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+}
+
+.search-item:hover {
+    background-color: var(--admin-bg-page);
+    border-color: var(--admin-primary);
+    transform: translateX(4px);
+}
+
+.search-info {
+    display: flex;
+    align-items: center;
+}
+
+.search-rank {
+    width: 24px;
+    height: 24px;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-size: 12px;
+}
+
+.rank-number {
+    color: var(--admin-accent-blue);
+    font-weight: 700;
+}
+
+.search-query {
+    font-weight: 500;
+    color: var(--admin-text-dark);
+    font-size: 14px;
+}
+
+.search-stats {
+    text-align: right;
+}
+
+.search-count {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    font-size: 14px;
+}
+
+.avg-results {
+    font-size: 11px;
+    color: var(--admin-text-subtle);
+}

@@ -1,0 +1,325 @@
+/* ReviewManager.css - Scoped */
+.admin-review-manager {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  margin-top: 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.admin-rm-error {
+  padding: 16px;
+  background: #fee2e2;
+  border-bottom: 1px solid #fecaca;
+  color: #b91c1c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-rm-dismiss-btn {
+  background: white;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-rm-header {
+  padding: 24px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-rm-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.admin-rm-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.admin-rm-loading,
+.admin-rm-empty {
+  padding: 64px;
+  text-align: center;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.admin-rm-list {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.admin-rm-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  background: white;
+}
+
+.admin-rm-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.admin-rm-reviewer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-rm-reviewer-name {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 15px;
+}
+
+.admin-rm-date {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.admin-rm-rating {
+  color: #f59e0b;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.admin-rm-content {
+  color: #334155;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.admin-rm-text {
+  margin: 0;
+}
+
+.admin-rm-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.admin-rm-status-badge {
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.admin-rm-status-approved {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.admin-rm-status-pending {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.admin-rm-status-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.admin-rm-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.admin-rm-select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 13px;
+  color: #334155;
+  background: white;
+  cursor: pointer;
+}
+
+.admin-rm-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.admin-rm-btn-reply {
+  background: #eff6ff;
+  color: #3b82f6;
+  border: 1px solid #dbeafe;
+}
+
+.admin-rm-btn-reply:hover {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.admin-rm-btn-delete {
+  background: white;
+  border: 1px solid #fee2e2;
+  color: #ef4444;
+}
+
+.admin-rm-btn-delete:hover {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #dc2626;
+}
+
+.admin-rm-replies {
+  margin-top: 20px;
+  padding-left: 24px;
+  border-left: 2px solid #e2e8f0;
+}
+
+.admin-rm-replies-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0 0 16px 0;
+}
+
+.admin-rm-reply-item {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.admin-rm-reply-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.admin-rm-reply-author {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 13px;
+}
+
+.admin-rm-reply-date {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.admin-rm-btn-delete-reply {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.admin-rm-btn-delete-reply:hover {
+  color: #ef4444;
+}
+
+.admin-rm-reply-text {
+  margin: 0;
+  font-size: 14px;
+  color: #475569;
+}
+
+.admin-rm-reply-form {
+  margin-top: 20px;
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.admin-rm-reply-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  margin-bottom: 12px;
+}
+
+.admin-rm-reply-textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+}
+
+.admin-rm-reply-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.admin-rm-btn-cancel {
+  background: white;
+  border: 1px solid #cbd5e1;
+  color: #64748b;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-rm-btn-cancel:hover {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.admin-rm-btn-submit {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-rm-btn-submit:hover {
+  background: #4338ca;
+}
+
+.admin-rm-pagination {
+  padding: 20px 24px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background: #f8fafc;
+}

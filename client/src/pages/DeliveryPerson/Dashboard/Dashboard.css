@@ -1,0 +1,30 @@
+/* Dashboard.css - Scoped */
+
+.dp-dashboard-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.dp-page-header {
+    margin-bottom: 8px;
+}
+
+.dp-page-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.dp-grid-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .dp-grid-section {
+        grid-template-columns: 1fr;
+    }
+}

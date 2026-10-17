@@ -1,0 +1,29 @@
+/* DetailsTabs.css - Scoped */
+.admin-tabs-container {
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.admin-tab-btn {
+  padding: 12px 0;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 15px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+
+.admin-tab-btn.admin-active {
+  color: #4f46e5;
+  border-bottom-color: #4f46e5;
+}
+
+.admin-tab-btn:hover:not(.admin-active) {
+  color: #1e293b;
+}

@@ -1,0 +1,106 @@
+.admin-ai-container {
+    padding: 1.5rem;
+    max-width: 80rem;
+    /* max-w-7xl */
+    margin: 0 auto;
+}
+
+.admin-ai-header {
+    margin-bottom: 1.5rem;
+}
+
+.admin-ai-title {
+    font-size: 1.5rem;
+    /* 2xl */
+    font-weight: 700;
+    color: #1f2937;
+    /* gray-800 */
+}
+
+.admin-ai-subtitle {
+    color: #6b7280;
+    /* gray-500 */
+}
+
+.admin-ai-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .admin-ai-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.admin-ai-chat-column {
+    grid-column: span 1;
+}
+
+@media (min-width: 1024px) {
+    .admin-ai-chat-column {
+        grid-column: span 2;
+    }
+}
+
+.admin-ai-info-panel {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    border: 1px solid #e5e7eb;
+    /* border-gray-200 */
+    height: fit-content;
+}
+
+.info-title {
+    font-weight: 700;
+    color: #1f2937;
+    /* gray-800 */
+    margin-bottom: 1rem;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    /* text-sm */
+    color: #4b5563;
+    /* gray-600 */
+}
+
+.info-item {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.check-icon {
+    color: #6366f1;
+    /* indigo-500 */
+}
+
+.info-footer {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f3f4f6;
+    /* border-gray-100 */
+}
+
+.footer-title {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.example-prompts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    /* text-xs */
+    color: #6b7280;
+    /* gray-500 */
+    font-style: italic;
+}

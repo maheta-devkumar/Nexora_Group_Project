@@ -1,0 +1,30 @@
+/* Separated CategoryForm.css */
+.cat-form-container {
+  padding: 8px;
+}
+
+.cat-input-group {
+  margin-bottom: 24px;
+}
+
+.cat-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.cat-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.cat-input:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}

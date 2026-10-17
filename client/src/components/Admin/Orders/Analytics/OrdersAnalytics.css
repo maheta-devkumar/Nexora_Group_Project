@@ -1,0 +1,55 @@
+/* OrdersAnalytics.css (Component) - Premium */
+.analytics-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.analytics-card {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card-header-analytics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-heading {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.chart-area {
+    width: 100%;
+    min-height: 300px;
+}
+
+/* Tooltip & Legend customization usually handled in JS prop, but basic wrappers here */
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}

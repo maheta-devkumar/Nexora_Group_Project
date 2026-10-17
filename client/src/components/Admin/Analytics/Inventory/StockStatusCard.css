@@ -1,0 +1,107 @@
+/* StockStatusCard.css */
+@import '../../../../styles/admin-theme.css';
+
+.stock-status-card {
+    background-color: var(--admin-white);
+    border: 1px solid var(--admin-border);
+    border-radius: 12px;
+    padding: 16px;
+    transition: all 0.2s ease;
+}
+
+.stock-status-card:hover {
+    box-shadow: var(--admin-shadow-sm);
+    transform: translateY(-2px);
+    border-color: var(--admin-primary);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-name {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    font-size: 14px;
+}
+
+.variant-name {
+    font-size: 12px;
+    color: var(--admin-text-subtle);
+    margin-top: 4px;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.status-out {
+    background-color: var(--admin-accent-red);
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.status-low {
+    background-color: var(--admin-accent-orange);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+.status-good {
+    background-color: var(--admin-accent-green);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.stock-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stock-count {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+    line-height: 1.2;
+}
+
+.stock-label {
+    font-size: 11px;
+    color: var(--admin-text-subtle);
+    margin-top: 2px;
+}
+
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.badge-out {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--admin-accent-red);
+}
+
+.badge-low {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--admin-accent-orange);
+}
+
+.badge-good {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--admin-accent-green);
+}

@@ -1,0 +1,31 @@
+/* RefundModals.css - Premium */
+.refund-summary {
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+.refund-amount-display {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: #b45309;
+    margin: 8px 0;
+}
+
+.refund-note {
+    font-size: 13px;
+    color: #92400e;
+    text-align: center;
+}
+
+.refund-reason-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background: white;
+}

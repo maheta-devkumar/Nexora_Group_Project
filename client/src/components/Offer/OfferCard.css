@@ -1,0 +1,237 @@
+/* OfferCard.css - Premium Design */
+
+.offer-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #edf2f7;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e0;
+}
+
+/* Status Borders */
+.offer-card.active {
+  border-top: 4px solid #f6ad55;
+}
+
+/* Orange for offers */
+.offer-card.inactive {
+  border-top: 4px solid #a0aec0;
+  opacity: 0.7;
+}
+
+.offer-card.expired {
+  border-top: 4px solid #a0aec0;
+  opacity: 0.6;
+  filter: grayscale(0.8);
+}
+
+.offer-card.upcoming {
+  border-top: 4px solid #4299e1;
+}
+
+.offer-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.offer-badge.exclusive {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #c53030;
+  border: 1px solid #fed7d7;
+}
+
+/* Header - Gradient or Solid Color */
+.offer-header {
+  background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+  color: white;
+  padding: 32px 24px;
+  text-align: center;
+  position: relative;
+}
+
+.offer-header.percent {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+}
+
+.offer-header.flat {
+  background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+}
+
+.offer-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.offer-discount {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 8px 0;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.offer-discount-type {
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.offer-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-description {
+  color: #718096;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.offer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+  border-top: 1px solid #edf2f7;
+  padding-top: 16px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.detail-item i {
+  color: #cbd5e0;
+  width: 16px;
+  text-align: center;
+}
+
+.detail-item .value {
+  font-weight: 600;
+  color: #2d3748;
+  margin-left: auto;
+}
+
+.time-remaining {
+  color: #e53e3e;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.time-remaining i {
+  color: #e53e3e;
+  font-size: 0.8rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.offer-footer {
+  padding: 20px 24px;
+  background-color: white;
+  border-top: none;
+  padding-top: 0;
+}
+
+.btn-apply-offer {
+  width: 100%;
+  padding: 14px;
+  background-color: #1a202c;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.btn-apply-offer:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Compact Version (optional usage) */
+.offer-card-compact {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #edf2f7;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.offer-card-compact:hover {
+  border-color: #f6ad55;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .offer-description {
+    font-size: 0.9rem;
+  }
+
+  .offer-discount {
+    font-size: 2rem;
+  }
+}

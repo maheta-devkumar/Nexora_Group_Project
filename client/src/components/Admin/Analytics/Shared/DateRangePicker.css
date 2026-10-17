@@ -1,0 +1,105 @@
+/* DateRangePicker.css */
+@import '../../../../styles/admin-theme.css';
+
+.date-range-picker {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid var(--admin-border);
+    box-shadow: var(--admin-shadow-sm);
+}
+
+.picker-title {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.quick-select {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.quick-button {
+    padding: 6px 12px;
+    font-size: 13px;
+    border: 1px solid var(--admin-border);
+    border-radius: 6px;
+    background-color: var(--admin-white);
+    color: var(--admin-text-dark);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quick-button:hover {
+    background-color: var(--admin-bg-page);
+    border-color: var(--admin-primary);
+    color: var(--admin-primary);
+}
+
+.date-inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--admin-text-subtle);
+    margin-bottom: 6px;
+}
+
+.date-input {
+    padding: 8px 12px;
+    border: 1px solid var(--admin-border);
+    border-radius: 6px;
+    background-color: var(--admin-bg-page);
+    color: var(--admin-text-dark);
+    font-size: 13px;
+}
+
+.date-input:focus {
+    outline: none;
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.apply-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.apply-enabled {
+    background-color: var(--admin-primary);
+    color: white;
+}
+
+.apply-enabled:hover {
+    background-color: var(--admin-primary-dark);
+    transform: translateY(-1px);
+}
+
+.apply-disabled {
+    background-color: var(--admin-bg-page);
+    color: var(--admin-text-light);
+    cursor: not-allowed;
+    border: 1px solid var(--admin-border);
+}

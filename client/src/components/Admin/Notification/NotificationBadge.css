@@ -1,0 +1,114 @@
+/* NotificationBadge.css */
+@import '../../../styles/admin-theme.css';
+
+.notification-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.type-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.type-badge.sm {
+    font-size: 11px;
+    padding: 2px 8px;
+}
+
+.type-badge.md {
+    font-size: 12px;
+    padding: 4px 10px;
+}
+
+.type-badge.lg {
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+/* Type Colors using theme variables for consistency */
+.type-badge.ORDER {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--admin-accent-blue);
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.type-badge.PAYMENT {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--admin-accent-green);
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.type-badge.DELIVERY {
+    background-color: rgba(139, 92, 246, 0.1);
+    color: var(--admin-primary);
+    /* Using primary purple */
+    border-color: rgba(139, 92, 246, 0.2);
+}
+
+.type-badge.OFFER {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--admin-accent-yellow);
+    border-color: rgba(245, 158, 11, 0.2);
+}
+
+.type-badge.FEEDBACK {
+    background-color: rgba(236, 72, 153, 0.1);
+    color: #db2777;
+    /* Pink/Rose color */
+    border-color: rgba(236, 72, 153, 0.2);
+}
+
+.type-badge.SYSTEM {
+    background-color: var(--admin-bg-page);
+    color: var(--admin-text-subtle);
+    border-color: var(--admin-border);
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-badge.sm {
+    font-size: 11px;
+    padding: 2px 8px;
+}
+
+.status-badge.md {
+    font-size: 12px;
+    padding: 4px 10px;
+}
+
+.status-badge.lg {
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+/* Status Colors */
+.status-badge.read {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--admin-accent-green);
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.status-badge.unread {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--admin-accent-red);
+    border-color: rgba(239, 68, 68, 0.2);
+}

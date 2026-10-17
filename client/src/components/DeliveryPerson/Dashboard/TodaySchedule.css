@@ -1,0 +1,349 @@
+/* TodaySchedule.css - Scoped */
+
+.dp-today-schedule {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dp-schedule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.dp-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #0f172a;
+}
+
+.dp-header-left h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.dp-current-date {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.dp-next-delivery {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    border: 1px solid #e2e8f0;
+}
+
+.dp-next-delivery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.dp-next-delivery-header h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #334155;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dp-delivery-time {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #1e293b;
+    background: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid #e2e8f0;
+}
+
+.dp-delivery-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dp-delivery-id {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.dp-delivery-id strong {
+    font-size: 18px;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.dp-delivery-id span {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.dp-delivery-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: #334155;
+}
+
+.dp-delivery-info svg {
+    color: #94a3b8;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.dp-delivery-distance {
+    font-size: 13px;
+    color: #64748b;
+    font-style: italic;
+}
+
+.dp-no-next-delivery {
+    text-align: center;
+    padding: 16px;
+    color: #94a3b8;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.dp-shifts-list h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 20px;
+}
+
+.dp-timeline {
+    position: relative;
+    padding-left: 24px;
+}
+
+.dp-timeline::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.dp-timeline-item {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.dp-timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.dp-timeline-marker {
+    position: absolute;
+    left: -24px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background: white;
+}
+
+.dp-timeline-item.shift .dp-timeline-marker {
+    color: #3b82f6;
+}
+
+.dp-timeline-item.shift.ongoing .dp-timeline-marker {
+    color: #3b82f6;
+    background: #eff6ff;
+    box-shadow: 0 0 0 4px #eff6ff;
+}
+
+.dp-timeline-content {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s;
+}
+
+.dp-timeline-content:hover {
+    transform: translateX(4px);
+    border-color: #cbd5e1;
+}
+
+.dp-shift-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.dp-shift-title {
+    flex: 1;
+}
+
+.dp-shift-title strong {
+    display: block;
+    font-size: 15px;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.dp-shift-time {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.dp-shift-status {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.dp-shift-status.ongoing {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.dp-shift-status.completed {
+    background: #f0fdf4;
+    color: #15803d;
+}
+
+.dp-shift-status.upcoming {
+    background: #fffbeb;
+    color: #b45309;
+}
+
+.dp-shift-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.dp-shift-progress {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.dp-progress-bar {
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.dp-progress-fill {
+    height: 100%;
+    background: #3b82f6;
+    border-radius: 3px;
+}
+
+.dp-shift-deliveries {
+    font-size: 13px;
+    color: #64748b;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+.dp-no-shifts {
+    text-align: center;
+    padding: 32px;
+    color: #94a3b8;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+/* Loading States */
+.dp-today-schedule.loading {
+    opacity: 0.8;
+}
+
+.dp-loading-icon {
+    width: 24px;
+    height: 24px;
+    background: #f1f5f9;
+    border-radius: 50%;
+    animation: dpPulse 1.5s infinite;
+}
+
+.dp-loading-icon.small {
+    width: 16px;
+    height: 16px;
+}
+
+.dp-loading-line {
+    background: #f1f5f9;
+    border-radius: 4px;
+    animation: dpPulse 1.5s infinite;
+    margin-bottom: 8px;
+}
+
+.dp-loading-line.medium {
+    height: 16px;
+    width: 50%;
+}
+
+.dp-loading-line.small {
+    height: 12px;
+    width: 30%;
+}
+
+@keyframes dpPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.dp-no-data,
+.dp-no-shifts {
+    text-align: center;
+    padding: 32px;
+    color: #64748b;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 2px dashed #e2e8f0;
+}
+
+.dp-no-data p,
+.dp-no-shifts p {
+    margin: 0;
+}

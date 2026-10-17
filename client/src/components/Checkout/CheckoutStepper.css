@@ -1,0 +1,163 @@
+/* CheckoutStepper.css - Premium Design System */
+.checkout-stepper {
+    margin: 40px 0 80px;
+    /* Increased bottom margin */
+    padding: 0 16px;
+    font-family: inherit;
+}
+
+.stepper-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    --progress-width: 0%;
+}
+
+/* Background Track */
+.stepper-container::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 60px;
+    right: 60px;
+    height: 4px;
+    background: var(--c-border);
+    border-radius: 4px;
+    z-index: 0;
+}
+
+/* Active Progress Track */
+.stepper-container::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 60px;
+    height: 4px;
+    width: var(--progress-width, 0%);
+    background: linear-gradient(90deg, var(--c-primary) 0%, #4338ca 100%);
+    border-radius: 4px;
+    z-index: 0;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Step Wrapper */
+.stepper-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    cursor: default;
+}
+
+/* Step Indicator */
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--c-bg-card);
+    border: 3px solid var(--c-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--c-text-sec);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Active State */
+.stepper-step.active .step-number {
+    border-color: var(--c-primary);
+    color: var(--c-primary);
+    background: var(--c-bg-card);
+    transform: scale(1.15);
+    box-shadow: 0 0 0 5px rgba(79, 70, 229, 0.15), var(--shadow-float);
+}
+
+/* Completed State */
+.stepper-step.completed .step-number {
+    background: linear-gradient(135deg, var(--c-primary) 0%, #4338ca 100%);
+    border-color: transparent;
+    color: white;
+    transform: scale(1);
+    box-shadow: var(--shadow-card);
+}
+
+/* Step Labels */
+.step-info {
+    margin-top: 45px;
+    /* Increased from 24px to prevent overlap */
+    text-align: center;
+    opacity: 0.5;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+    min-width: 120px;
+    padding: 0 4px;
+    /* Slight padding */
+}
+
+.stepper-step.active .step-info,
+.stepper-step.completed .step-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.step-title {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--c-text-main);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+}
+
+.step-description {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--c-text-sec);
+    font-weight: 500;
+    max-width: 140px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+.stepper-step.active .step-title {
+    color: var(--c-primary);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .checkout-stepper {
+        margin: 30px 0 40px;
+        padding: 0 10px;
+    }
+
+    .stepper-container::before,
+    .stepper-container::after {
+        left: 40px;
+        right: 40px;
+        top: 22px;
+    }
+
+    .step-number {
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+        border-width: 2px;
+    }
+
+    .step-info {
+        margin-top: 16px;
+    }
+
+    .step-description {
+        display: none;
+    }
+}

@@ -1,0 +1,113 @@
+/* ExportPanel.css */
+.export-panel {
+    background-color: var(--card-bg, #ffffff);
+    border-radius: var(--border-radius-lg, 0.75rem);
+    border: 1px solid var(--border-color, #e2e8f0);
+    padding: 1rem;
+    box-shadow: var(--shadow, 0 1px 3px rgba(0,0,0,0.1));
+}
+
+.export-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.export-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary, #64748b);
+    margin-right: 1rem;
+}
+
+.export-format-selector {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.export-format-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: var(--border-radius, 0.5rem);
+    background-color: var(--card-bg, #ffffff);
+    color: var(--text-primary, #1e293b);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition, all 0.3s ease);
+}
+
+.export-format-btn:hover:not(:disabled) {
+    border-color: var(--primary-color, #3b82f6);
+    color: var(--primary-color, #3b82f6);
+}
+
+.export-format-btn.active {
+    background-color: rgba(59, 130, 246, 0.1);
+    border-color: var(--primary-color, #3b82f6);
+    color: var(--primary-color, #3b82f6);
+}
+
+.export-format-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.export-format-btn span {
+    margin-right: 0.5rem;
+}
+
+.export-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--success-color, #10b981);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius, 0.5rem);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition, all 0.3s ease);
+}
+
+.export-btn:hover:not(:disabled) {
+    background-color: #0da271;
+}
+
+.export-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.export-btn span {
+    margin-right: 0.5rem;
+}
+
+.export-btn.exporting span {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.export-info {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary, #64748b);
+}
+
+.export-info p {
+    margin: 0.25rem 0;
+}
+
+.export-info .error {
+    color: var(--danger-color, #ef4444);
+    margin-top: 0.5rem;
+}

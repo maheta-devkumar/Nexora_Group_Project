@@ -1,0 +1,228 @@
+/* SystemDashboard.css */
+.system-dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.dashboard-header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary, #1e293b);
+}
+
+.dashboard-header p {
+    color: var(--text-secondary, #64748b);
+}
+
+.dashboard-error {
+    padding: 1rem;
+    background-color: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--border-radius, 0.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard-error span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--danger-color, #ef4444);
+}
+
+.dashboard-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.dashboard-overview-card {
+    background-color: var(--card-bg, #ffffff);
+    border-radius: var(--border-radius-lg, 0.75rem);
+    border: 1px solid var(--border-color, #e2e8f0);
+    padding: 1.5rem;
+    box-shadow: var(--shadow, 0 1px 3px rgba(0,0,0,0.1));
+}
+
+.dashboard-overview-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.dashboard-overview-card-header h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary, #1e293b);
+}
+
+.dashboard-status-badge {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 9999px;
+}
+
+.dashboard-status-badge.healthy {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success-color, #10b981);
+}
+
+.dashboard-status-badge.degraded {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning-color, #f59e0b);
+}
+
+.dashboard-status-badge.unhealthy {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger-color, #ef4444);
+}
+
+.dashboard-status-badge.loading {
+    background-color: rgba(100, 116, 139, 0.1);
+    color: var(--secondary-color, #64748b);
+}
+
+.dashboard-health-components {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.dashboard-health-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-radius: var(--border-radius, 0.5rem);
+    transition: var(--transition, all 0.3s ease);
+}
+
+.dashboard-health-item:hover {
+    background-color: var(--bg-color, #f8fafc);
+}
+
+.dashboard-health-item-name {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #64748b);
+    text-transform: capitalize;
+}
+
+.dashboard-health-item-status {
+    padding: 0.125rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 9999px;
+}
+
+.dashboard-health-item-status.healthy {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success-color, #10b981);
+}
+
+.dashboard-health-item-status.degraded {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning-color, #f59e0b);
+}
+
+.dashboard-health-item-status.unhealthy {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger-color, #ef4444);
+}
+
+.dashboard-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.dashboard-stat-card {
+    text-align: center;
+    padding: 1rem;
+    border-radius: var(--border-radius-lg, 0.75rem);
+    background-color: var(--bg-color, #f8fafc);
+    transition: var(--transition, all 0.3s ease);
+}
+
+.dashboard-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow, 0 1px 3px rgba(0,0,0,0.1));
+}
+
+.dashboard-stat-card.blue {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.dashboard-stat-card.green {
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+.dashboard-stat-icon {
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-stat-value {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--text-primary, #1e293b);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.dashboard-stat-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #64748b);
+}
+
+.dashboard-performance-metrics {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.dashboard-performance-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.dashboard-performance-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #64748b);
+}
+
+.dashboard-performance-value {
+    font-weight: 600;
+    color: var(--text-primary, #1e293b);
+}
+
+.dashboard-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.dashboard-loading .spinner {
+    border: 3px solid var(--border-color, #e2e8f0);
+    border-top: 3px solid var(--primary-color, #3b82f6);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

@@ -1,0 +1,61 @@
+/* ActivityFilters.css */
+@import '../../../../styles/admin-theme.css';
+
+.activity-filters {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid var(--admin-border);
+    margin-bottom: 24px;
+}
+
+.filters-title {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.filter-group {
+    margin-bottom: 16px;
+}
+
+.filter-group:last-child {
+    margin-bottom: 0;
+}
+
+.filter-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--admin-text-subtle);
+    margin-bottom: 8px;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-button {
+    padding: 6px 14px;
+    font-size: 13px;
+    border: 1px solid var(--admin-border);
+    border-radius: 9999px;
+    background-color: var(--admin-bg-page);
+    color: var(--admin-text-subtle);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+    border-color: var(--admin-primary);
+    color: var(--admin-primary);
+}
+
+.filter-button.active {
+    background-color: var(--admin-primary);
+    border-color: var(--admin-primary);
+    color: white;
+}

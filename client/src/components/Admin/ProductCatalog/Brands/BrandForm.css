@@ -1,0 +1,163 @@
+/* BrandForm.css - Scoped & Tokenized */
+
+.admin-brand-form-wrapper {
+    background: white;
+    border-radius: var(--border-radius-card);
+    width: 100%;
+}
+
+.admin-brand-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--admin-border);
+    background: var(--admin-bg-main);
+    border-radius: var(--border-radius-card) var(--border-radius-card) 0 0;
+}
+
+.admin-brand-form-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--admin-text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-brand-form-header h3 i {
+    color: var(--admin-primary);
+}
+
+.admin-close-btn {
+    background: none;
+    border: none;
+    color: var(--admin-text-muted);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+    transition: color 0.2s;
+}
+
+.admin-close-btn:hover {
+    color: var(--admin-danger);
+}
+
+/* Form Body */
+.admin-brand-form {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admin-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--admin-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-form-label i {
+    color: var(--admin-primary);
+    opacity: 0.8;
+}
+
+.admin-form-input,
+.admin-form-textarea {
+    padding: 12px 16px;
+    border: 1px solid var(--admin-border);
+    border-radius: var(--border-radius-input);
+    font-size: 14px;
+    color: var(--admin-text-primary);
+    background: white;
+    transition: all 0.2s;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.admin-form-input:focus,
+.admin-form-textarea:focus {
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.admin-form-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Error Message */
+.admin-error-message {
+    background: var(--admin-danger-bg);
+    color: var(--admin-danger);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: -8px;
+}
+
+/* Actions */
+.admin-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+    padding-top: 20px;
+    border-top: 1px solid var(--admin-border);
+}
+
+.admin-btn-secondary {
+    padding: 10px 20px;
+    background: white;
+    border: 1px solid var(--admin-border);
+    color: var(--admin-text-secondary);
+    border-radius: var(--border-radius-btn);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.admin-btn-secondary:hover {
+    background: var(--admin-bg-hover);
+    color: var(--admin-text-primary);
+}
+
+.admin-btn-primary {
+    padding: 10px 24px;
+    background: var(--admin-primary);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-btn);
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-btn-primary:hover:not(:disabled) {
+    background: var(--admin-primary-hover);
+    transform: translateY(-1px);
+}
+
+.admin-btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

@@ -1,0 +1,83 @@
+/* SearchQueryCard.css */
+@import '../../../../styles/admin-theme.css';
+
+.search-query-card {
+    background-color: var(--admin-white);
+    border: 1px solid var(--admin-border);
+    border-radius: 12px;
+    padding: 16px;
+    transition: all 0.2s ease;
+}
+
+.search-query-card:hover {
+    box-shadow: var(--admin-shadow-sm);
+    border-color: var(--admin-primary);
+}
+
+.query-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.query-info {
+    display: flex;
+    align-items: center;
+}
+
+.query-rank {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--admin-accent-blue);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    margin-right: 8px;
+}
+
+.query-text {
+    font-weight: 600;
+    color: var(--admin-text-dark);
+    font-size: 14px;
+}
+
+.avg-info {
+    font-size: 12px;
+    color: var(--admin-text-subtle);
+    margin-top: 4px;
+}
+
+.query-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.count-display {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--admin-text-dark);
+}
+
+.count-label {
+    font-size: 12px;
+    color: var(--admin-text-subtle);
+}
+
+.status-badge {
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 9999px;
+}
+
+.status-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--admin-accent-green);
+}
+
+.status-failed {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--admin-accent-red);
+}

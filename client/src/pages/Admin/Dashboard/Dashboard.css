@@ -1,0 +1,236 @@
+/* =======================================================
+   ADMIN DASHBOARD STYLES - SCOPED & PREMIUM
+   ======================================================= */
+
+/* 1. Global Dashboard Scope */
+.admin-dashboard-page {
+    background-color: var(--admin-bg-page);
+    min-height: 100vh;
+    padding: 32px 40px;
+    font-family: var(--admin-font);
+    color: var(--admin-text-main);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* 2. Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 3. Typography & Headers */
+.admin-dashboard-title {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--admin-text-primary);
+    position: relative;
+    display: inline-block;
+    margin: 0 0 8px 0;
+}
+
+.admin-dashboard-section-header {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--admin-text-primary);
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+/* 4. Cards & Structure */
+.admin-dashboard-card {
+    background: var(--admin-bg-card);
+    border-radius: var(--border-radius-card);
+    border: 1px solid var(--admin-border);
+    box-shadow: var(--shadow-card);
+    padding: 24px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-dashboard-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--admin-border-focus);
+}
+
+/* 5. Buttons & Controls */
+.admin-refresh-btn {
+    padding: 10px 24px;
+    background: linear-gradient(135deg, var(--admin-primary) 0%, var(--admin-primary-dark) 100%);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-btn);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-refresh-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.admin-refresh-btn:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+/* 6. AI Insights & Charts Layout */
+.admin-dashboard-charts-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+@media (max-width: 1200px) {
+    .admin-dashboard-charts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 7. Chart Toggle Controls */
+.ad-chart-controls {
+    display: flex;
+    background: #f1f5f9;
+    padding: 4px;
+    border-radius: 12px;
+    gap: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+.ad-chart-btn {
+    flex: 1;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: capitalize;
+}
+
+.ad-chart-btn:hover {
+    color: #334155;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.ad-chart-btn.active {
+    background: white;
+    color: #4f46e5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Refresh Button Custom Action */
+.ad-refresh-action {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.ad-refresh-action:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+}
+
+.ad-refresh-action:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    background: #94a3b8;
+    transform: none;
+    box-shadow: none;
+}
+
+/* 8. Detailed Stats Grids */
+.admin-dashboard-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+@media (max-width: 1200px) {
+    .admin-dashboard-details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 9. Empty States */
+.admin-empty-state {
+    padding: 40px;
+    text-align: center;
+    border: 2px dashed var(--admin-border);
+    border-radius: var(--border-radius-card);
+    color: var(--admin-text-secondary);
+}
+
+.admin-success-state {
+    padding: 24px;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: var(--border-radius-card);
+    color: #047857;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 10. Loading Shimmer */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.admin-loading-skeleton {
+    width: 100%;
+    height: 100vh;
+    background: #f1f5f9;
+    background-image: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 50%, #f1f5f9 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}

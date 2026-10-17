@@ -1,0 +1,143 @@
+/* ActionModal.css - Scoped */
+.admin-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  animation: adminFadeIn 0.2s ease-out;
+}
+
+.admin-modal-content {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 90%;
+  max-width: 500px;
+  overflow: hidden;
+  animation: adminSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'Inter', sans-serif;
+}
+
+.admin-modal-danger .admin-modal-header {
+  border-bottom: 1px solid #fee2e2;
+}
+
+.admin-modal-warning .admin-modal-header {
+  border-bottom: 1px solid #fef3c7;
+}
+
+.admin-modal-success .admin-modal-header {
+  border-bottom: 1px solid #dcfce7;
+}
+
+.admin-modal-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-modal-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.admin-modal-body {
+  padding: 24px;
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.admin-modal-actions {
+  padding: 20px 24px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.admin-modal-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.admin-modal-btn-cancel {
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+}
+
+.admin-modal-btn-cancel:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.admin-modal-btn-confirm {
+  background: #4f46e5;
+  color: white;
+}
+
+.admin-modal-btn-confirm:hover {
+  background: #4338ca;
+}
+
+/* Variant styles */
+.admin-modal-danger .admin-modal-btn-confirm {
+  background: #ef4444;
+}
+
+.admin-modal-danger .admin-modal-btn-confirm:hover {
+  background: #dc2626;
+}
+
+.admin-modal-warning .admin-modal-btn-confirm {
+  background: #f59e0b;
+}
+
+.admin-modal-warning .admin-modal-btn-confirm:hover {
+  background: #d97706;
+}
+
+.admin-modal-success .admin-modal-btn-confirm {
+  background: #10b981;
+}
+
+.admin-modal-success .admin-modal-btn-confirm:hover {
+  background: #059669;
+}
+
+@keyframes adminFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes adminSlideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

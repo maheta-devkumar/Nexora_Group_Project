@@ -1,0 +1,153 @@
+/* LoadingSkeleton.css */
+@import '../../../../styles/admin-theme.css';
+
+.loading-skeleton {
+    background-color: var(--admin-bg-main);
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.skeleton-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.skeleton-header {
+    margin-bottom: 32px;
+}
+
+.skeleton-title {
+    height: 32px;
+    background-color: var(--admin-border);
+    border-radius: 8px;
+    width: 200px;
+    margin-bottom: 8px;
+    opacity: 0.5;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skeleton-description {
+    height: 16px;
+    background-color: var(--admin-border);
+    border-radius: 4px;
+    width: 300px;
+    opacity: 0.3;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skeleton-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+    .skeleton-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .skeleton-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.skeleton-card {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--admin-border);
+}
+
+.skeleton-card-title {
+    height: 14px;
+    background-color: var(--admin-border);
+    border-radius: 4px;
+    width: 100px;
+    margin-bottom: 16px;
+    opacity: 0.4;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skeleton-card-value {
+    height: 32px;
+    background-color: var(--admin-border);
+    border-radius: 6px;
+    width: 80px;
+    margin-bottom: 8px;
+    opacity: 0.6;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skeleton-card-label {
+    height: 12px;
+    background-color: var(--admin-border);
+    border-radius: 4px;
+    width: 60px;
+    opacity: 0.3;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skeleton-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 1024px) {
+    .skeleton-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.skeleton-section {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--admin-border);
+}
+
+.skeleton-section-title {
+    height: 24px;
+    background-color: var(--admin-border);
+    border-radius: 6px;
+    width: 150px;
+    margin-bottom: 24px;
+    opacity: 0.5;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skeleton-chart {
+    height: 300px;
+    background-color: var(--admin-bg-page);
+    border-radius: 8px;
+    opacity: 0.5;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skeleton-item {
+    height: 48px;
+    background-color: var(--admin-bg-page);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    opacity: 0.4;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.skeleton-item:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+}

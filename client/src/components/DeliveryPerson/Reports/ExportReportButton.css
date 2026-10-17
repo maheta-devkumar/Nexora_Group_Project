@@ -1,0 +1,221 @@
+.export-report-section {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #e5e7eb;
+}
+
+.export-options {
+    margin-bottom: 20px;
+}
+
+.export-options h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.export-options h4 i {
+    color: #10b981;
+}
+
+.option-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.option-btn {
+    flex: 1;
+    min-width: 100px;
+    padding: 14px 20px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.option-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.pdf-btn {
+    background: #fef2f2;
+    color: #dc2626;
+    border-color: #fecaca;
+}
+
+.pdf-btn:hover:not(:disabled) {
+    background: #fee2e2;
+    border-color: #fca5a5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1);
+}
+
+.excel-btn {
+    background: #f0fdf4;
+    color: #16a34a;
+    border-color: #bbf7d0;
+}
+
+.excel-btn:hover:not(:disabled) {
+    background: #dcfce7;
+    border-color: #86efac;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.1);
+}
+
+.print-btn {
+    background: #eff6ff;
+    color: #2563eb;
+    border-color: #bfdbfe;
+}
+
+.print-btn:hover {
+    background: #dbeafe;
+    border-color: #93c5fd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+/* Export Status */
+.export-status {
+    margin: 20px 0;
+}
+
+.export-success-message {
+    background: #d1fae5;
+    border: 1px solid #a7f3d0;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideIn 0.5s ease;
+}
+
+.export-success-message i {
+    color: #10b981;
+    font-size: 20px;
+}
+
+.export-success-message span {
+    color: #065f46;
+    font-weight: 500;
+}
+
+.export-loading {
+    background: #fef3c7;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.export-loading .loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f59e0b;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.export-loading span {
+    color: #92400e;
+    font-weight: 500;
+}
+
+/* Export Tips */
+.export-tips {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+}
+
+.export-tips h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.export-tips h5 i {
+    color: #8b5cf6;
+}
+
+.export-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.export-tips li {
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.export-tips li::before {
+    content: '•';
+    position: absolute;
+    left: 8px;
+    color: #9ca3af;
+    font-weight: bold;
+}
+
+.export-tips li:last-child {
+    border-bottom: none;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .option-buttons {
+        flex-direction: column;
+    }
+    
+    .option-btn {
+        width: 100%;
+    }
+    
+    .export-success-message,
+    .export-loading {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+}

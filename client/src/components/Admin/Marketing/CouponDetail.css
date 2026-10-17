@@ -1,0 +1,594 @@
+/* CouponDetail.css */
+@import '../../../styles/admin-theme.css';
+
+.detail-container {
+    padding: 32px;
+    background-color: var(--admin-bg-page);
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.header-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: var(--admin-shadow-sm);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn-back {
+    background-color: var(--admin-white);
+    color: var(--admin-text-dark);
+    border: 1px solid var(--admin-border);
+}
+
+.btn-back:hover:not(:disabled) {
+    background-color: var(--admin-bg-page);
+    border-color: var(--admin-border);
+}
+
+.btn-edit,
+.btn-save {
+    background-color: var(--admin-primary);
+    color: white;
+}
+
+.btn-edit:hover:not(:disabled),
+.btn-save:hover:not(:disabled) {
+    background-color: var(--admin-primary-dark);
+    box-shadow: var(--admin-shadow-md);
+}
+
+.btn-cancel {
+    background-color: var(--admin-white);
+    color: var(--admin-text-subtle);
+    border: 1px solid var(--admin-border);
+}
+
+.btn-cancel:hover:not(:disabled) {
+    background-color: var(--admin-bg-page);
+    color: var(--admin-text-dark);
+}
+
+.btn-delete {
+    background-color: var(--admin-accent-red);
+    color: white;
+}
+
+.btn-delete:hover:not(:disabled) {
+    background-color: #dc2626;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+}
+
+/* Alert Styles */
+.alert {
+    padding: 16px 24px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    animation: slideIn 0.3s ease;
+}
+
+.alert-error {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    color: var(--admin-accent-red);
+}
+
+.alert-icon {
+    font-size: 20px;
+}
+
+.alert-content {
+    flex: 1;
+    font-size: 14px;
+}
+
+.alert-close {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.alert-close:hover {
+    opacity: 1;
+}
+
+/* Detail View Styles */
+.detail-view {
+    animation: fadeIn 0.4s ease;
+}
+
+.detail-card {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    box-shadow: var(--admin-shadow-card);
+    overflow: hidden;
+    border: 1px solid var(--admin-border);
+}
+
+.card-header {
+    padding: 32px;
+    background: linear-gradient(135deg, var(--admin-bg-page) 0%, var(--admin-white) 100%);
+    border-bottom: 1px solid var(--admin-border);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header-icon {
+    background-color: var(--admin-primary);
+    color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: var(--admin-shadow-md);
+}
+
+.header-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.coupon-title {
+    margin: 0;
+    font-size: 24px;
+    color: var(--admin-text-dark);
+    font-weight: 700;
+}
+
+.status-badge {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.active {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--admin-primary);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.status-badge.inactive {
+    background-color: rgba(107, 114, 128, 0.1);
+    color: var(--admin-text-subtle);
+    border: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+.card-content {
+    padding: 32px;
+}
+
+.detail-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.section {
+    padding: 24px;
+    background-color: var(--admin-bg-page);
+    border-radius: 12px;
+    border: 1px solid var(--admin-border);
+}
+
+.section h3 {
+    margin: 0 0 20px 0;
+    color: var(--admin-text-dark);
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--admin-border);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.label {
+    color: var(--admin-text-subtle);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.value {
+    color: var(--admin-text-dark);
+    font-weight: 500;
+    text-align: right;
+    font-size: 14px;
+}
+
+.value.highlight {
+    color: var(--admin-primary);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.date-value {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--admin-text-subtle);
+}
+
+.badge {
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-blue {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--admin-primary);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.badge-green {
+    background-color: rgba(34, 197, 94, 0.1);
+    color: var(--admin-accent-green);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+/* Variants Section */
+.variants-section {
+    padding: 24px;
+    background-color: var(--admin-bg-page);
+    border-radius: 12px;
+    border: 1px solid var(--admin-border);
+}
+
+.variants-section h3 {
+    margin: 0 0 20px 0;
+    color: var(--admin-text-dark);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.variants-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.variant-tag {
+    padding: 8px 16px;
+    background-color: var(--admin-white);
+    border: 1px solid var(--admin-primary);
+    border-radius: 8px;
+    color: var(--admin-primary);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.no-variants {
+    color: var(--admin-text-subtle);
+    font-style: italic;
+    padding: 8px 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Edit Form Styles */
+.edit-form {
+    animation: fadeIn 0.4s ease;
+}
+
+.coupon-form {
+    background-color: var(--admin-white);
+    border-radius: 12px;
+    box-shadow: var(--admin-shadow-card);
+    padding: 32px;
+    border: 1px solid var(--admin-border);
+}
+
+.form-section {
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.form-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.form-section h3 {
+    margin: 0 0 24px 0;
+    color: var(--admin-text-dark);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--admin-text-dark);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--admin-text-dark);
+    background-color: var(--admin-white);
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group input.error,
+.form-group select.error {
+    border-color: var(--admin-accent-red);
+    background-color: #fef2f2;
+}
+
+.error-text {
+    display: block;
+    margin-top: 6px;
+    color: var(--admin-accent-red);
+    font-size: 13px;
+}
+
+.input-with-unit {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-unit input {
+    padding-right: 48px;
+}
+
+.input-unit {
+    position: absolute;
+    right: 16px;
+    color: var(--admin-text-subtle);
+    font-size: 14px;
+    pointer-events: none;
+    font-weight: 500;
+}
+
+.checkbox-group {
+    margin-top: 16px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    color: var(--admin-text-dark);
+    font-weight: 500;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: var(--admin-white);
+    border: 1px solid var(--admin-border);
+    border-radius: 4px;
+    appearance: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+    background-color: var(--admin-primary);
+    border-color: var(--admin-primary);
+}
+
+.checkbox-label input[type="checkbox"]:checked::after {
+    content: '✓';
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Loading and Error States */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: var(--admin-primary);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.coupon-not-found {
+    text-align: center;
+    padding: 48px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.error-message {
+    background-color: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+.error-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.error-content h3 {
+    color: var(--admin-text-dark);
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.error-content p {
+    color: var(--admin-text-subtle);
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .detail-container {
+        padding: 16px;
+    }
+
+    .detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding-bottom: 16px;
+        margin-bottom: 24px;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+        padding: 24px;
+    }
+
+    .header-icon {
+        align-self: center;
+    }
+
+    .detail-sections {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        flex: 1;
+        justify-content: center;
+    }
+}

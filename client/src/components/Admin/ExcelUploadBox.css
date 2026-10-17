@@ -1,0 +1,139 @@
+/* ExcelUploadBox.css */
+.upload-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+.upload-card.disabled {
+    opacity: 0.6;
+    filter: grayscale(100%);
+}
+
+.upload-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.upload-icon-box {
+    padding: 0.5rem;
+    background-color: #eff6ff;
+    border-radius: 0.5rem;
+    color: #2563eb;
+}
+
+.upload-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.dashed-placeholder {
+    border: 2px dashed #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 3rem;
+    text-align: center;
+    background-color: #f8fafc;
+}
+
+.placeholder-text {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.upload-dropzone {
+    border: 2px dashed #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+}
+
+.upload-dropzone:hover:not(.loading) {
+    border-color: #818cf8;
+    background-color: #eef2ff;
+}
+
+.upload-dropzone.drag-active {
+    border-color: #6366f1;
+    background-color: #e0e7ff;
+    transform: scale(1.01);
+}
+
+.upload-dropzone.loading {
+    background-color: #f8fafc;
+    border-color: #e2e8f0;
+    cursor: wait;
+}
+
+.dropzone-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.icon-circle {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    background-color: #e0e7ff;
+    color: #4f46e5;
+}
+
+.drag-active .icon-circle {
+    background-color: #c7d2fe;
+    color: #4338ca;
+}
+
+.file-name-display {
+    text-align: center;
+}
+
+.file-name {
+    color: #059669;
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+}
+
+.file-status {
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.instruction-text {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #334155;
+    margin: 0;
+}
+
+.sub-text {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+}
+
+.spinner-icon {
+    animation: spin 1s linear infinite;
+    height: 2rem;
+    width: 2rem;
+}

@@ -1,0 +1,52 @@
+/* Payments.css */
+.payments-page-container {
+    padding: 24px;
+    max-width: 1600px;
+    margin: 0 auto;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced Card Hover */
+.payment-card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.payment-card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Table Actions */
+.action-btn-icon {
+    padding: 6px;
+    border-radius: 50%;
+    color: var(--admin-text-secondary);
+    transition: all 0.2s;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.action-btn-icon:hover {
+    background-color: var(--admin-bg-hover);
+    color: var(--admin-primary);
+}
+
+/* Gradient text for values */
+.value-gradient {
+    background: linear-gradient(135deg, var(--admin-text-primary) 0%, var(--admin-text-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

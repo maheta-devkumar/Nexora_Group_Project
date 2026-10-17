@@ -1,0 +1,196 @@
+/* OrderModals.css - Scoped */
+
+.admin-om-container {
+    display: flex;
+    gap: 12px;
+}
+
+.admin-om-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.admin-om-btn.update {
+    background: #0f172a;
+    color: white;
+}
+
+.admin-om-btn.update:hover {
+    background: #1e293b;
+    transform: translateY(-1px);
+}
+
+.admin-om-btn.history {
+    background: white;
+    color: #64748b;
+    border-color: #e2e8f0;
+}
+
+.admin-om-btn.history:hover {
+    border-color: #64748b;
+    color: #1e293b;
+}
+
+.admin-om-btn.cancel {
+    background: white;
+    color: #ef4444;
+    border-color: #fecaca;
+}
+
+.admin-om-btn.cancel:hover {
+    background: #fef2f2;
+    border-color: #ef4444;
+}
+
+/* Modal Overlay */
+.admin-om-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    animation: adminOmFadeIn 0.2s ease-out;
+}
+
+.admin-om-modal {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: adminOmSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.admin-om-title {
+    padding: 20px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    background: #f8fafc;
+}
+
+.admin-om-title h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.admin-om-description {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.admin-om-form {
+    padding: 24px;
+}
+
+.admin-om-group {
+    margin-bottom: 20px;
+}
+
+.admin-om-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
+}
+
+.admin-om-input,
+.admin-om-select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s;
+    background: #f8fafc;
+    box-sizing: border-box;
+}
+
+.admin-om-input:focus,
+.admin-om-select:focus {
+    background: white;
+    border-color: #6366f1;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.admin-om-actions {
+    padding: 20px 24px;
+    background: #f8fafc;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.admin-om-modal-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.admin-om-modal-btn.primary {
+    background: #0f172a;
+    color: white;
+}
+
+.admin-om-modal-btn.primary:hover {
+    background: #1e293b;
+}
+
+.admin-om-modal-btn.danger {
+    background: #ef4444;
+    color: white;
+}
+
+.admin-om-modal-btn.danger:hover {
+    background: #dc2626;
+}
+
+.admin-om-modal-btn.cancel {
+    background: white;
+    color: #64748b;
+    border-color: #cbd5e1;
+}
+
+.admin-om-modal-btn.cancel:hover {
+    background: #f1f5f9;
+    color: #334155;
+}
+
+@keyframes adminOmFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes adminOmSlideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

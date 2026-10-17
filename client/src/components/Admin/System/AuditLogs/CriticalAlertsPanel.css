@@ -1,0 +1,132 @@
+/* CriticalAlertsPanel.css */
+.critical-alerts-panel {
+    background-color: rgba(239, 68, 68, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--border-radius-lg, 0.75rem);
+    overflow: hidden;
+}
+
+.critical-alerts-header {
+    padding: 1rem 1.5rem;
+    background-color: rgba(239, 68, 68, 0.1);
+    border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.critical-alerts-header h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #991b1b;
+    margin-right: 0.75rem;
+}
+
+.critical-alerts-count {
+    padding: 0.25rem 0.75rem;
+    background-color: #ef4444;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 9999px;
+}
+
+.critical-alerts-description {
+    color: #991b1b;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.critical-alerts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.critical-alert-item {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(239, 68, 68, 0.1);
+    transition: var(--transition, all 0.3s ease);
+}
+
+.critical-alert-item:hover {
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+.critical-alert-item:last-child {
+    border-bottom: none;
+}
+
+.critical-alert-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.critical-alert-icon {
+    margin-right: 0.75rem;
+    margin-top: 0.25rem;
+    color: #ef4444;
+}
+
+.critical-alert-details {
+    flex: 1;
+}
+
+.critical-alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.25rem;
+}
+
+.critical-alert-title {
+    font-weight: 600;
+    color: #991b1b;
+    flex: 1;
+}
+
+.critical-alert-time {
+    font-size: 0.75rem;
+    color: #991b1b;
+}
+
+.critical-alert-meta {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #991b1b;
+    gap: 0.5rem;
+}
+
+.critical-alert-reason {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--border-radius, 0.5rem);
+}
+
+.critical-alert-reason p {
+    font-size: 0.875rem;
+    color: #991b1b;
+    margin: 0;
+}
+
+.critical-alerts-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid rgba(239, 68, 68, 0.2);
+    text-align: center;
+}
+
+.critical-alerts-footer button {
+    color: #991b1b;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition, all 0.3s ease);
+}
+
+.critical-alerts-footer button:hover {
+    color: #7f1d1d;
+}
