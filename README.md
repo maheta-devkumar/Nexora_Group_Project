@@ -1,4 +1,5 @@
-🛒 Nexora — E-Commerce & Inventory Management System
+#🛒 Nexora — E-Commerce & Inventory Management System
+
 Nexora is a full-stack e-commerce and inventory management platform designed to simplify online shopping, product management, inventory tracking, and order delivery. The project aims to provide a seamless experience for customers while offering administrators and delivery personnel the tools needed to manage daily operations efficiently.
 
 The name Nexora represents the next era of e-commerce and inventory management.
